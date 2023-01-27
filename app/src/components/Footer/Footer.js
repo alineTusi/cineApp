@@ -13,6 +13,7 @@ const Footer = () => {
 return (
     <MainFooterContainer>
         <FooterContainerLeftAndRight>
+
                  <FooterContainerLeft>
                     <Logo>
                         <img src={PopcornIcon} alt="popcorn"/>
@@ -36,12 +37,14 @@ return (
                         <p>+1 800 9123 456 78</p>
                     </PhoneContainer>
                 </FooterContainerLeft>
+
                     <FooterContainerRight>
                         <h4>Sign  <span>NewsLetter</span></h4>
                         <p>Subscribe to our newsletter list to get latest news and updates from us</p>
                         <input type="email" placeholder="Email"></input>
                         <button>Subscribe</button>
                     </FooterContainerRight> 
+                    
         </FooterContainerLeftAndRight> 
                         <IconsContainer>
                             <img src={FacebookIcon} alt="facebook"/>

@@ -16,22 +16,22 @@ export default function Icons (){
     <Logos>
         <Photos>
 
-            
-            <PhotoImage2 src={Logo2} alt="" />
-            <PhotoImage3 src={Logo3} alt="" />
-            <PhotoImage4 src={Logo4} alt="" />
-            <PhotoImage5 src={Logo5} alt=""/>
-            <PhotoImage7 src={Logo7} alt="" />
-           
+          <PhotoImage2 src={Logo2} alt="" />
+          <PhotoImage3 src={Logo3} alt="" />
+          <PhotoImage4 src={Logo4} alt="" />
+          <PhotoImage5 src={Logo5} alt=""/>
+          <PhotoImage7 src={Logo7} alt="" />  
+
+        </Photos>    
+          
+      </Logos>
+  )
+} 
   
             
 
             
 
 
-        </Photos>
       
-    </Logos>
-  )
-}
 
