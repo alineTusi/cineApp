@@ -6,8 +6,6 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-// import "./styles.css";
-
 import { Autoplay, Pagination, Navigation } from "swiper";
 
 const Carousel = () => {
@@ -42,7 +40,7 @@ const Carousel = () => {
         }}
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper"
+        id="swiperCarousel"
         breakpoints={{
           640: {
             slidesPerView: 1,
@@ -60,7 +58,7 @@ const Carousel = () => {
       >
         <div>
           {items.map((item, i) => (
-            <SwiperSlide key={i}>
+            <SwiperSlide key={i} id="swiperSlideCarousel">
               <img src={item.banner_url} />
               
             </SwiperSlide>

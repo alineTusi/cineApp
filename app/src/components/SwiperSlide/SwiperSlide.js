@@ -1,13 +1,37 @@
 import "../../assets/styles/swiper.css";
 import { Pagination, Navigation } from "swiper";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import PlayIcon from "../../assets/icons/play.svg"
-import Data from "../../assets/data/data"
 
 const  SwiperContainer = () => {
+
+  const [items, setItems] = useState([]);
+  useEffect(() => {
+    console.log(items);
+  }, [items]);
+
+  useEffect(() => {
+    axios({
+      method: "get",
+      url: "http://localhost:3004/movies",
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+      },
+    }).then(function (response) {
+      setItems(response.data);
+    });
+  }, []);
+
+  const openInfo = (item) => {
+    const url = `http://localhost:3000/movieInfo/${item.id}`;
+    window.open(url)
+  }
+
   return (
   
     <>
@@ -42,18 +66,21 @@ const  SwiperContainer = () => {
             },
           }}
       >
-        {Data.map((data) => {
+        {items.map((item, i) => {
             return (
+              <div className="swiperCont">
                 <SwiperSlide>
-                <img src={data.url} alt=""/>
-                <p className="bottom">{data.title}</p>
+                <img src={item.img_url} alt=""/>
+                <p className="bottom">{item.title}</p>
              
-                <div className="play-icon">
+                <div className="play-icon" onClick={()=> openInfo(item)}>
+                  
                     <div className="icon-container">
                         <img src={PlayIcon} alt="play"/>
                     </div>
                 </div>
             </SwiperSlide>
+            </div>
             )
         })}
       </Swiper>
