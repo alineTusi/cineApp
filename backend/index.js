@@ -1,5 +1,7 @@
 import express from "express";
 import movieRouter from "./movies/routes.js";
+import calendarRouter from "./calendar/routes.js";
+import scheduleRouter from "./schedule/routes.js";
 import bodyParser from 'body-parser';
 import cors from 'cors'
 
@@ -14,3 +16,5 @@ app.listen(PORT, () =>{
 }); 
 
 app.use('/movies', movieRouter);
+app.use('/calendar', calendarRouter);
+app.use('/schedule', scheduleRouter);
