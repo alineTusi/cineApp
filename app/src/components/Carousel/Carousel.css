@@ -1,4 +1,10 @@
-
+/* #app { height: 100% }
+html,
+body {
+  position: relative;
+  height: 100%;
+  margin-top: 30px;
+} */
 
 .body {
   background: #eee;
@@ -13,7 +19,6 @@
 /* swiper */
 #swiperCarousel {
   width: 80%;
-  height: 400px;
   margin-bottom: 2em;
 }
 
