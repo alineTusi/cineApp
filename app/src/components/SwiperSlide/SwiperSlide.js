@@ -22,7 +22,7 @@ const  SwiperContainer = () => {
         }}
         navigation={true}
         modules={[Pagination, Navigation]}
-        className="mySwiper"
+        class="swiper-container"
         breakpoints={{
             "@0.00": {
               slidesPerView: 1,
