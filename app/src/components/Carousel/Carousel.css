@@ -1,5 +1,6 @@
 
-body {
+
+.body {
   background: #eee;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -9,16 +10,17 @@ body {
 
 }
 
-.swiper {
+/* swiper */
+#swiperCarousel {
   width: 80%;
   height: 400px;
-  margin-bottom: 5em;
+  margin-bottom: 2em;
 }
 
-.swiper-slide {
+/* .swiper-slide  */
+#swiperCarousel {
   text-align: center;
   font-size: 18px;
-  background: #fff;
 
   /* Center slide text vertically */
   display: -webkit-box;
@@ -35,10 +37,11 @@ body {
   align-items: center;
 }
 
-.swiper-slide img {
+/* .swiper-slide img */
+#swiperCarousel {
   display: block;
   width: 100%;
-  height: 720px;
   object-fit: cover;
-
 }
+
+@media screen {}
