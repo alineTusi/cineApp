@@ -22,7 +22,7 @@ import {
 } from "./NavBar.style"
 import "./Navbar.css"
 
-import LogoPic from "../../assets/icons/Logo.Pic.svg"
+// import LogoPic from "../../assets/icons/Logo.Pic.svg"
 
 
 //add this to a custom theme file
@@ -88,7 +88,7 @@ function ResponsiveAppBar() {
           >
 
             <LogoDiv>
-                <img src={LogoPic} alt="popcorn"/>
+                {/* <img src={LogoPic} alt="popcorn"/> */}
                 <p>CineGAF</p>
            </LogoDiv>
 

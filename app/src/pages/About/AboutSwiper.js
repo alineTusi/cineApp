@@ -35,6 +35,7 @@ const AboutSwiper = () => {
         className="mySlide"
       >
         <SwiperSlide style={{backgroundImage:`url(${SwiperPic})`,  backgroundSize: "cover", }}>
+
           <div>
             
             <h3>Gjorge Popov</h3> 

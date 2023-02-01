@@ -11,6 +11,11 @@
     display: flex;
   }
 }
+@media screen and (min-width: 600px) {
+  .movie-info {
+    display: flex;
+  }
+}
 
 .movie-info-content {
   width: 100%;
