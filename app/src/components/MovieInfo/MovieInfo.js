@@ -49,7 +49,7 @@ const MovieInfo = () => {
             <p className="movie-info-description"> {movie.description}</p>
           </div>
         </div>
-        <Schedule />
+        <Schedule movieId={movieId}/>
         <div className="video">
           <iframe
             className="video-iframe"

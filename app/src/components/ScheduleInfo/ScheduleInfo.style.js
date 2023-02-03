@@ -7,4 +7,8 @@ export const ScheduleInfoWrapper = styled.div`
   background-color: darkred;
   text-align: center;
   color: white;
+  &:hover {
+    cursor: pointer;
+    background-color: #021335; 
+  }
 `;

@@ -5,6 +5,6 @@ import {
 
 const router = express.Router();
 
-router.get("/", getUpcomingSchedule);
+router.get("/:id", getUpcomingSchedule);
 
 export default router;

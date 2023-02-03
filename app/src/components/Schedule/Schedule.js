@@ -14,10 +14,13 @@ import "./Schedule.css";
 const ScheduleRow = ({ day }) => {
   return (
     <>
+    
       <TableRow>
+      {/* {format(post.createdAt, 'dd/mm/yyyy')} */}
+      <div className="schedule-date">{day.day}</div>
         {day.schedule.map((row, i) => (
           <>
-            <TableCell component="th" scope="row">
+            <TableCell component="th" scope="row" className="schedule-tcell">
               <div>
                 <ScheduleInfo row={row} />
               </div>
@@ -29,7 +32,7 @@ const ScheduleRow = ({ day }) => {
   );
 };
 
-const Schedule = () => {
+const Schedule = ({ movieId }) => {
   const [rows, setrows] = useState([]);
   useEffect(() => {
     // console.log(rows);
@@ -38,7 +41,7 @@ const Schedule = () => {
   useEffect(() => {
     axios({
       method: "get",
-      url: "http://localhost:3004/schedule",
+      url: `http://localhost:3004/schedule/${movieId}`,
       headers: {
         "Access-Control-Allow-Origin": "*",
       },
@@ -48,6 +51,7 @@ const Schedule = () => {
   }, []);
   return (
     <ScheduleWrapper>
+      <div>{/* <span>day={day}</span> */}</div>
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 650 }} aria-label="caption table">
           <TableBody>

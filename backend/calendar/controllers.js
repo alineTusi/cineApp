@@ -1,4 +1,3 @@
-
 import { pool } from "../db.js";
 import { createCalendarQuery, deleteCalendarQuery, getCalendarByIdQuery, listCalendarQuery, partialUpdateCalendarQuery, updateCalendarQuery } from "./queries.js";
 
