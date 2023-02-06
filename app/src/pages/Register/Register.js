@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState} from 'react';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
@@ -247,5 +246,3 @@ import { useNavigate } from 'react-router-dom';
           };
 
   export default FormEx
-=======
->>>>>>> d1d233f743217623af1ec570b7db1c4af0abab18

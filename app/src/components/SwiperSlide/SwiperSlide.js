@@ -50,7 +50,7 @@ const  SwiperContainer = () => {
         breakpoints={{
             "@0.00": {
               slidesPerView: 1,
-              spaceBetween: 0,
+              spaceBetween: 10,
             },
             "@0.75": {
               slidesPerView: 2,
@@ -68,12 +68,7 @@ const  SwiperContainer = () => {
       >
         {items.map((item, i) => {
             return (
-<<<<<<< HEAD
-              <>
-              <h1>{data.Genre}</h1>
-=======
               <div className="swiperCont">
->>>>>>> d1d233f743217623af1ec570b7db1c4af0abab18
                 <SwiperSlide>
                 <img src={item.img_url} alt=""/>
                 <p className="bottom">{item.title}</p>
@@ -85,11 +80,7 @@ const  SwiperContainer = () => {
                     </div>
                 </div>
             </SwiperSlide>
-<<<<<<< HEAD
-            </>
-=======
             </div>
->>>>>>> d1d233f743217623af1ec570b7db1c4af0abab18
             )
         })}
       </Swiper>
