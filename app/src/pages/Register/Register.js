@@ -28,7 +28,7 @@ import { useNavigate } from 'react-router-dom';
 
           }); 
 
-          const FormEx = () => {
+          const Register = () => {
           const [emailExists, setEmailExists] = useState(false);
           const [password, setPassword] = useState(true)
           const [error, setError] = useState(null);
@@ -245,4 +245,4 @@ import { useNavigate } from 'react-router-dom';
           );
           };
 
-  export default FormEx
+  export default Register
