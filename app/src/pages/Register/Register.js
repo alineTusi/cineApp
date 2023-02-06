@@ -4,7 +4,7 @@ import * as yup from 'yup';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import { MainRegisterContainer, Logo, RegisterTitle,InputFormContainer } from "./Register.style"
-import "./regist.css"
+import "./Register.css";
 import PopcornIcon from "../../assets/icons/popcorn.svg"
 import ReCAPTCHA from 'react-google-recaptcha';
 import FileInput from '../../components/file-input/File-input';
@@ -57,7 +57,7 @@ import { useNavigate } from 'react-router-dom';
             }  else {
               console.log("hello")
           try {
-            const response = await fetch("http://localhost:3006/register", {
+            const response = await fetch("http://localhost:3004/register", {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",

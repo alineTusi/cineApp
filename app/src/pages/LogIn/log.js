@@ -52,7 +52,7 @@ const LoginForm = () => {
         onSubmit: async (values, actions) => {
             const vals= {...values}
             try {
-                const response = await fetch("http://localhost:3006/login", {
+                const response = await fetch("http://localhost:3004/login", {
                   method: "POST",
                   headers: {
                     "Content-Type": "application/json",
