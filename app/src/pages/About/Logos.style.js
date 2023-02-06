@@ -15,7 +15,6 @@ height: 50px;
 export const Photos=styled.div`
 display: flex;
 justify-content: space-around; 
-width: 
 color: white; 
 background: black;
 

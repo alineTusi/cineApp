@@ -1,101 +1,73 @@
 import React from "react";
-import {Link} from "react-router-dom"
-import BackgroundPic from "../../assets/icons/Stars2.jpg"
+import { Link } from "react-router-dom";
+// import BackgroundPic from "../../assets/icons/Stars2.jpg";
 import AboutSwiper from "./AboutSwiper";
-import AboutInfo from "./AboutInfo";
+// import AboutInfo from "./AboutInfo";
 
-import Icons from "./Logos";
-import { AboutBackground, StarsBackround,
-        ContactPart, BoxContact,OverlayContact,ConTitle, 
-        ConInfo, ListInfo, YouAre, Slash1, Home, Slash2,ConTact, 
+// import Icons from "./Logos";
+import {
+  AboutBackground,
+  StarsBackround,
+  ContactPart,
+  BoxContact,
+  OverlayContact,
+  ConTitle,
+  ConInfo,
+  ListInfo,
+  YouAre,
+  Slash1,
+  Home,
+  Slash2,
+  ConTact,
+} from "./About.style";
 
-
-} from "./About.style"
-
-
-
-
-
-
-           
-           
 export default function About() {
-    return(
+  return (
+    <AboutBackground>
+      <StarsBackround
+        style={{
+          // backgroundImage: `url(${BackgroundPic})`,
+          backgroundSize: "cover",
+        }}
+      >
+        <ContactPart>
+          <BoxContact></BoxContact>
 
-      
-      <AboutBackground>
-
-        <StarsBackround style={{backgroundImage:`url(${BackgroundPic})`,  backgroundSize: "cover", }} >
-
-          <ContactPart>
-            <BoxContact></BoxContact>
-
-            <OverlayContact> 
-              <ConTitle>
+          <OverlayContact>
+            <ConTitle>
               <h3>About</h3>
-              </ConTitle>
+            </ConTitle>
 
-              <ConInfo>
+            <ConInfo>
+              <ListInfo>
+                <YouAre>You are here:</YouAre>
 
-                <ListInfo>
+                <Slash1>/</Slash1>
 
-                  <YouAre>You are here:</YouAre>
+                <Link style={{ textDecoration: "none" }} to="/">
+                  <Home>Home</Home>
+                </Link>
 
-                  <Slash1>/</Slash1>
+                <Slash2>/</Slash2>
 
+                <ConTact>About</ConTact>
+              </ListInfo>
+            </ConInfo>
+          </OverlayContact>
+        </ContactPart>
+      </StarsBackround>
 
-                  <Link style={{textDecoration:"none",}}to="/">
-                    <Home >Home</Home>
-                  </Link>
+      <div>
+        {/* <AboutInfo /> */}
+      </div>
 
-                
-                  <Slash2>/</Slash2>
-                  
-                  <ConTact>About</ConTact>
-                </ListInfo>
+      <div>
+        <AboutSwiper />
+      </div>
 
-                
-                  
-              </ConInfo> 
-
-
-
-            </OverlayContact>
-          </ContactPart>
-                    
-                    
-              
-        </StarsBackround>
-
-        <div>
-         <AboutInfo/>
-        </div>
-
-        
-        <div>
-          <AboutSwiper/>
-        </div>
-
-        <div>
-
-          <Icons/>
-        </div>
-
-        
-
-
-
-       
-       
-       
-
-
-
-
-     
-
-      </AboutBackground>
-
-
-    )
-  };       
+      <div>
+        {/* <Icons /> */}
+      </div>
+    </AboutBackground>
+  );
+}

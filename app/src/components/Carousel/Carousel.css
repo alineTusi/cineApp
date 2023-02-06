@@ -1,11 +1,3 @@
-/* #app { height: 100% }
-html,
-body {
-  position: relative;
-  height: 100%;
-  margin-top: 30px;
-} */
-
 .body {
   background: #eee;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -18,7 +10,7 @@ body {
 
 /* swiper */
 #swiperCarousel {
-  width: 80%;
+  width: 100%;
   margin-bottom: 2em;
 }
 
@@ -43,10 +35,16 @@ body {
 }
 
 /* .swiper-slide img */
-#swiperCarousel {
+#swiperCarousel .swiper-slide img {
   display: block;
   width: 100%;
+  height: auto;
   object-fit: cover;
 }
 
-@media screen {}
+@media screen and (min-width: 1024px) {
+  #swiperCarousel .swiper-slide img {
+    height: 50%;
+    flex-shrink: 0;
+  }
+}

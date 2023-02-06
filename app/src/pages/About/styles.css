@@ -9,7 +9,7 @@
   padding: 0;
 }
 
- .swiper {
+.mySlide .swiper {
   width: 85%;
   height: 430px;
   margin: 50px auto;

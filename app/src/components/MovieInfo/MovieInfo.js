@@ -4,6 +4,7 @@ import "./MovieInfo.css";
 import { useParams } from "react-router-dom";
 import starIcon from "../../assets/icons/starMovieInfo.svg";
 import clockIcon from "../../assets/icons/clock.svg";
+import Schedule from "../Schedule/Schedule";
 
 const MovieInfo = () => {
   const [movie, setMovie] = useState({});
@@ -32,11 +33,15 @@ const MovieInfo = () => {
             <h1 className="movie-info-description-title">{movie.title}</h1>
             <ul className="movie-info-list">
               <li className="movie-info-list-item">
-                <img className="movie-info-icon" src={starIcon} alt="star icon" />
+                <img
+                  className="movie-info-icon"
+                  src={starIcon}
+                  alt="star icon"
+                />
                 {movie.rating}
               </li>
               <li className="movie-info-list-item">
-                <img className="movie-info-icon" src={clockIcon}  />
+                <img className="movie-info-icon" src={clockIcon} />
                 {movie.movie_length} min
               </li>
               <li className="movie-info-list-item">{movie.genre}</li>
@@ -44,7 +49,7 @@ const MovieInfo = () => {
             <p className="movie-info-description"> {movie.description}</p>
           </div>
         </div>
-
+        <Schedule movieId={movieId}/>
         <div className="video">
           <iframe
             className="video-iframe"
