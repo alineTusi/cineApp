@@ -3,12 +3,13 @@ import movieRouter from "./movies/routes.js";
 import cors from 'cors'
 import userAuth from "./models/userAuth.js"
 import usersRegister from "./models/usersRegister.js"
+import userLogout from "./models/userLogout.js"
 import helmet from "helmet";
 const app = express();
-const PORT = 3004;
+const PORT = 3006;
 
 
-// app.use(helmet())
+app.use(helmet())
 app.use(cors())
 
 app.use(express.json());
@@ -21,3 +22,4 @@ app.listen(PORT, () =>{
 app.use('/movies', movieRouter)
 app.use('/login', userAuth)
 app.use('/register', usersRegister)
+app.use('/logout', userLogout)

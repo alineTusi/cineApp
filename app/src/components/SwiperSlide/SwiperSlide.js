@@ -26,7 +26,7 @@ const  SwiperContainer = () => {
         breakpoints={{
             "@0.00": {
               slidesPerView: 1,
-              spaceBetween: 10,
+              spaceBetween: 0,
             },
             "@0.75": {
               slidesPerView: 2,
@@ -44,6 +44,8 @@ const  SwiperContainer = () => {
       >
         {Data.map((data) => {
             return (
+              <>
+              <h1>{data.Genre}</h1>
                 <SwiperSlide>
                 <img src={data.url} alt=""/>
                 <p className="bottom">{data.title}</p>
@@ -54,6 +56,7 @@ const  SwiperContainer = () => {
                     </div>
                 </div>
             </SwiperSlide>
+            </>
             )
         })}
       </Swiper>

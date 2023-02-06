@@ -7,6 +7,8 @@ import PopcornIcon from "../../assets/icons/popcorn.svg"
 import { MainContainer, Logo, TitleContainer, InputContainer, SignInContainer, ModalContainer, ModalInput } from './LogIn.style';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import Navbar from '../../components/NavBar/NavBar';
+
 
 // 1. You need to add additional columns to your existed table 'users'
 // 2. Image will data type Varchar, will be saved name of the image
@@ -22,7 +24,14 @@ const validationSchema = yup.object({
 const LoginForm = () => {
     
     const [showModal, setShowModal] = useState(false)
-    const navigate = useNavigate();
+    const [emailExist, setEmailExist] = useState(false)
+    const [passwordExist, setPasswordExist]= useState(false)
+    const [error, setError] = useState(null);
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const [user, setUser] = useState("")
+
+    const navigate = useNavigate()
+    
 
     const navigateToRegister = () => {
         navigate('/register')
@@ -30,8 +39,6 @@ const LoginForm = () => {
     const handleModal = ()=> {
         setShowModal(!showModal)
     }
-
-
 
     console.log(showModal)
 
@@ -42,30 +49,37 @@ const LoginForm = () => {
           },
 
         validationSchema: validationSchema,
-        onSubmit: (values, actions) => {
-            actions.resetForm()
+        onSubmit: async (values, actions) => {
             const vals= {...values}
-            fetch("http://localhost:3004/login", {
-                method: "POST",
-                headers: {
+            try {
+                const response = await fetch("http://localhost:3006/login", {
+                  method: "POST",
+                  headers: {
                     "Content-Type": "application/json",
-                },
-                body: JSON.stringify(vals)
-            }).catch(err => {
-                return;
-            }).then(res => {
-                if (!res || !res.ok || res.status >= 400)  {
-                    return;
+                  },
+                  body: JSON.stringify(vals),
+                });
+                if (response.status === 400) {
+                  setEmailExist(true);
+                
+                } else if (!response.ok || response.status === 401) {
+                  setError(await response.text());
+                  setPasswordExist(true)
+                } else {
+                  const json = await response.json();
+                  setIsLoggedIn(true);
+                  setUser(json.username);
                 }
-                return res.json()
-            }).then(data => { 
-                if(!data) return
-                console.log(data)
-            })
-
-          console.log(JSON.stringify(values, null, 3));
+              } catch (error) {
+                setError(error.message);
+              } 
+              actions.resetForm()
+             
         },
       });
+      if (isLoggedIn) {
+        navigate('/');
+      }
 
   return (
     <MainContainer>
@@ -81,9 +95,9 @@ const LoginForm = () => {
                  <TextField
                 id="email"
                 name="email"
-                label="Email"
+                label={emailExist ? <div style={{color: "yellow", display: "flex", marginBottom:"1em"}}>You provide wrong email!</div> : "Email"}
                 type="email"
-                placeholder='Email'
+                placeholder='Email'mdnset
                 value={formik.values.email}
                 onChange={formik.handleChange}
                 error={formik.touched.email && Boolean(formik.errors.email)}
@@ -92,7 +106,7 @@ const LoginForm = () => {
                 <TextField
                 id="password"
                 name="password"
-                label="Password"
+                label={passwordExist ? <div style={{color: "yellow", display: "flex", marginBottom:"1em"}}>You provide wrong password!</div> :  "Password"}
                 type="password"
                 placeholder='Password'
                 value={formik.values.password}
@@ -114,13 +128,16 @@ const LoginForm = () => {
     </SignInContainer>
         {showModal ? 
         <ModalContainer>
+         
             <ModalInput>
                 <input placeholder="Email" type="email"></input>
                 <button>Send</button>
                 <button onClick={handleModal}>Close</button>
           </ModalInput>
         </ModalContainer> : ""}
+        {isLoggedIn && <Navbar email={user} />}
     </MainContainer>
+    
   );
 };
 
