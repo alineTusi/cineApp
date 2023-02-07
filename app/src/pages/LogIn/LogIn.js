@@ -4,10 +4,11 @@ import * as yup from 'yup';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import PopcornIcon from "../../assets/icons/popcorn.svg"
-import { MainContainer, Logo, TitleContainer, InputContainer, SignInContainer, ModalContainer, ModalInput } from './LogIn.style';
+// import { MainContainer, Logo, TitleContainer, InputContainer, SignInContainer, ModalContainer, ModalInput } from './LogIn.style.js';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import Navbar from '../../components/NavBar/NavBar';
+import { InputContainer, Logo, MainContainer, SignInContainer, TitleContainer } from './LogIn.style';
 
 
 const validationSchema = yup.object({
@@ -121,7 +122,7 @@ const LoginForm = () => {
                 </div>
       </InputContainer>
     </SignInContainer>
-        {showModal ? 
+        {/* {showModal ? 
         <ModalContainer>
          
             <ModalInput>
@@ -130,7 +131,7 @@ const LoginForm = () => {
                 <button onClick={handleModal}>Close</button>
           </ModalInput>
         </ModalContainer> : ""}
-        {isLoggedIn && <Navbar email={user} />}
+        {isLoggedIn && <Navbar email={user} />} */}
     </MainContainer>
     
   );
