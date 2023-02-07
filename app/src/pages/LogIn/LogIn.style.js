@@ -9,8 +9,6 @@ export const MainContainer = styled.div`
     height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
-   
-
 `;
 
 export const Logo = styled.div`

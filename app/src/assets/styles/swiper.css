@@ -1,6 +1,6 @@
 .swiper {
   width: 80%;
-  height: 100%;
+  height: auto;
 }
 
 
@@ -67,6 +67,9 @@
   top: 0
 
 }
+#swiper-container {
+  width: 80%;
+}
 
 .icon-container {
   background-color: red;
@@ -91,6 +94,9 @@
     z-index: 10;
     text-align:center;
     
+}
+#swiper-container {
+  width: 80%;
 }
 
 .swiper-slide:hover .bottom{
