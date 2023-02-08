@@ -26,6 +26,11 @@ input[type='file'] {
   color: white;
 }
 
+#register-form {
+  margin-top: 3em;
+
+}
+
 #label-gender {
   color: red;
   font-size: 18px;

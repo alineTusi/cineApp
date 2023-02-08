@@ -97,7 +97,7 @@ import { useNavigate } from 'react-router-dom';
               <h1>Register Form</h1>
           </RegisterTitle>
           <InputFormContainer>
-              <form onSubmit={formik.handleSubmit} encType="multipart/form-data">
+              <form id="register-form" onSubmit={formik.handleSubmit} encType="multipart/form-data">
                   <div style={{display:"flex", flexDirection:"column"}}>
                   <label htmlFor="gender" id="label-gender">Select Gender*</label>
                             <select name="gender" id="gender" onBlur={formik.handleBlur} onChange={formik.handleChange} value={formik.values.gender} required>
@@ -240,9 +240,9 @@ import { useNavigate } from 'react-router-dom';
                           </Button>
                       </div>
                 </form>
+                Hello
           </InputFormContainer>
         </MainRegisterContainer>
-          );
-          };
+          )}
 
   export default Register

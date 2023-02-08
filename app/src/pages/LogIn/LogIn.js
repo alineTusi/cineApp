@@ -170,7 +170,7 @@ const LoginForm = () => {
                 <button onClick={handleModal}>Close</button>
           </ModalInput>
         </ModalContainer> : ""}
-        {isLoggedIn && <Navbar email={user} />} */}
+        {isLoggedIn && <Navbar email={user} />}
     </MainContainer>
   );
 };
