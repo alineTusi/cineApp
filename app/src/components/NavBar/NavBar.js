@@ -19,7 +19,7 @@ import SearchBar from "../Search/Search";
 
 //import AdbIcon from "@mui/icons-material/Adb";
 
-const pages = ["Home", "About", "Contact Us"];
+const pages = ["home", "about", "contact"];
 const settings = ["Sign In", "Sign Out"];
 const movie = ["Genre"];
 
@@ -162,7 +162,7 @@ function ResponsiveAppBar() {
                         fontSize: "20px",
                         fontWeight: "bolder",
                       }}
-                      to={`/${page}`}
+                      to={`${page}`}
                     >
                       {page}
                     </Link>
