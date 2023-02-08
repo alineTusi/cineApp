@@ -1,8 +1,6 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Roboto', 'serif';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -10,4 +8,45 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+#gender {
+  height: 40px;
+  padding-left: 1em;
+  margin: 1em 0em 1em 2em;
+  font-size: 15px;
+  border: none;
+  border-radius: 0.4em;
+  box-shadow: 0px 15px 5px black;
+  width: 88%;
+}
+
+input[type='file'] {
+  color: white;
+}
+
+#label-gender {
+  color: red;
+  font-size: 18px;
+  margin-left: 2em;
+}
+
+@media only screen and (max-width: 1024px) {
+  #gender {
+    width: 88%;
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+  #gender {
+    width: 65%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #gender {
+    width: 65%;
+  }
 }
