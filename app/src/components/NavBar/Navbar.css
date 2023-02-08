@@ -1,15 +1,175 @@
-.MuiAppBar-root{
-    background-color: black !important;
-  
+.MuiAppBar-root {
+  background-color: black !important;
+  height: 100px;
+
+   {
+    /*box-shadow: 0px 30px 50px black !important;*/
+  }
 }
 
 .MuiBox-root {
-   /*justify-content: center;*/
-   margin-left: 40px;
-    
+  font-family: "Roboto Serif", serif;
 }
 
+.CineGAFLOGO img {
+  width: 50%;
+  height: 60px;
 
+  padding: 10px 0px 0px 30px;
+}
+
+.CineDescription {
+  font-size: 25px;
+}
+
+.CineGafSecondLogo img {
+  width: 70%;
+  height: 60px;
+  padding: 5px 0px 0px 0px;
+}
+
+.CinemaLogo {
+  width: 50%;
+  height: 50px;
+}
+
+.CineDescTwo {
+  padding-right: 20px;
+}
+
+/*.MuiButtonBase-root::first-letter {
+  text-transform: uppercase;
+}
+
+.MuiButtonBase-root {
+  text-transform: lowercase;
+}*/
+
+@media only screen and (max-width: 738px) {
+  .moviesDrop {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 738px) {
+  .css-19r6kue-MuiContainer-root {
+    height: 70px;
+  }
+}
+
+@media only screen and (max-width: 738px) {
+  .css-1poimk-MuiPaper-root-MuiMenu-paper-MuiPaper-root-MuiPopover-paper {
+    background-color: black !important;
+  }
+}
+
+@media only screen and (max-width: 738px) {
+  .MuiAppBar-root {
+    height: 80%;
+  }
+}
+
+@media only screen and (max-width: 738px) {
+  .MuiTypography-root {
+    color: red;
+  }
+}
+
+@media only screen and (max-width: 738px) {
+  .CinemaLogo {
+    width: 110%;
+  }
+}
+
+/*.MuiAppBar-root {
+  background-color: black !important;
+}
+
+.MuiBox-root {
+}
+
+.SignIn {
+  padding-left: 0px;
+}
+
+.MuiButtonBase-root {
+}
+
+.MoviesDropDown {
+}
+
+.Movies {
+  background-color: black;
+  color: white;
+  font-size: 25px;
+  font-family: "Roboto Serif", serif;
+  border-style: hidden;
+}
+
+.SignIn {
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  font-family: "Roboto Serif", serif;
+  border-style: hidden;
+}
+
+.CineGAFLOGO {
+  display: flex;
+  align-items: center;
+  margin-left: 1em;
+}
+
+.CineGAFLOGO img {
+  width: 30px;
+  height: 50px;
+}
+
+.CineGAFLOGO p {
+  color: red;
+  font-family: "Roboto Serif", serif;
+  font-size: 25px;
+  font-weight: 700;
+  text-align: center;
+  margin-left: 10px;
+}
+
+@media only screen and (max-width: 738px) {
+  .MuiBox-root {
+    /*justify-content: center;
+    width: 50%;
+  }
+}*/
+
+/*@media only screen and (max-width: 750px) {
+  .MuiPaper-root {
+    width: 0%;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .CineGAFResponse {
+    width: 10%;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .CineGAFResponse img {
+    width: 30%;
+    height: 50px;
+    text-align: center;
+    color: red;
+    margin: auto;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .CineGAFResponse p {
+    color: red;
+    margin: auto;
+    font-family: "Roboto Serif", serif;
+  }
+}*/
 
 /*.MuiTypography-root{
     margin-top: 10px !important;
@@ -28,8 +188,3 @@
 .img{
     padding: 10px 0px 0px 45px; 
 }*/
-
-
-
-
-
