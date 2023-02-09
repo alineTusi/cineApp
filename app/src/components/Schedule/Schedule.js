@@ -6,14 +6,12 @@ import TableContainer from "@mui/material/TableContainer";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import axios from "axios";
-import { ScheduleWrapper } from "./Schedule.style";
 import ScheduleInfo from "../ScheduleInfo/ScheduleInfo";
 import "./Schedule.css";
 
 const ScheduleRow = ({ day }) => {
 
   const openInfo = (item) => {
-    console.log('row', item);
     const url = `http://localhost:3000/chairMapHeader/${item}`;
     window.open(url)
   }
@@ -40,11 +38,9 @@ const Schedule = ({ movieId }) => {
   const [rows, setrows] = useState([]);
   useEffect(() => {
     console.log(rows);
-    console.log(movieId)
   }, [rows]);
 
   useEffect(() => {
-    console.log("asdavvvvvv", movieId)
     axios({
       method: "get",
       url: `http://localhost:3004/schedule/movies/${movieId}`,
@@ -53,7 +49,6 @@ const Schedule = ({ movieId }) => {
       },
     }).then(function (response) {
       setrows(response.data);
-      console.log(response.data)
     }).catch(e =>{
       console.log(e)
     });
@@ -61,7 +56,7 @@ const Schedule = ({ movieId }) => {
 
   return (
   
-    <ScheduleWrapper>
+    <div className="scheduleWrapper">
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 650 }} aria-label="caption table">
           <TableBody>
@@ -73,6 +68,6 @@ const Schedule = ({ movieId }) => {
           </TableBody>
         </Table>
       </TableContainer>
-    </ScheduleWrapper>  );
+    </div>  );
 };
 export default Schedule;

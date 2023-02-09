@@ -2,16 +2,19 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { format } from "date-fns";
+import {
+  ChairMapHeaderContainer,
+  ChairMapHeaderImg,
+  ChairMapHeaderInfo,
+} from "./ChairMapHeader.style.js";
 
 const ChairMapHeader = () => {
   const [schedule, setSchedule] = useState({});
   const [movie, setMovie] = useState({});
   let { scheduleId } = useParams();
   let { movieId } = useParams();
-  // let Date = schedule.date;
 
   useEffect(() => {
-    
     if (scheduleId) {
       axios({
         method: "get",
@@ -23,14 +26,10 @@ const ChairMapHeader = () => {
         setSchedule(response.data);
       });
     }
-    console.log("scheduleId", scheduleId)
   }, [scheduleId]);
 
-
   useEffect(() => {
-
     if (schedule.movie_id) {
-    
       axios({
         method: "get",
         url: `http://localhost:3004/movies/${schedule.movie_id}`,
@@ -41,22 +40,29 @@ const ChairMapHeader = () => {
         setMovie(response.data);
       });
     }
-    console.log("schedule.date", schedule.date)
-    console.log("schedule movie id", schedule.movie_id)
+    // console.log("date", format(new Date(schedule.date), "dd-MM-yyyy"));
+    console.log("time", schedule.time);
   }, [schedule]);
+
+  const formatDate = (date) =>{
+    if (!date){
+     return '' 
+    }
+    return format(new Date(date), 'dd-MM-yyyy')
+  }
 
   return (
     <>
-      <div></div>
-      <div>
-        <img src={movie.img_url} alt="movie cover" />
-      </div>
-      <div>
-        <h2>{movie.title}</h2>
-        <h3>{format(new Date(), "yyyy-MM-dd kk:mm:ss")}</h3>
-        <h3>{schedule.time}</h3>
-        <h3>Room {schedule.room}</h3>
-      </div>
+      <ChairMapHeaderContainer>
+        <ChairMapHeaderImg>
+          <img src={movie.img_url} alt="movie cover" />
+        </ChairMapHeaderImg>
+        <ChairMapHeaderInfo>
+          <h3>{movie.title}</h3>
+          <h3>{formatDate(schedule.date)} | {schedule.time}</h3>
+          <h3>Room {schedule.room}</h3>
+        </ChairMapHeaderInfo>
+      </ChairMapHeaderContainer>
     </>
   );
 };
