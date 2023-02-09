@@ -11,6 +11,7 @@ const MovieInfo = () => {
   let { movieId } = useParams();
 
   useEffect(() => {
+
     axios({
       method: "get",
       url: `http://localhost:3004/movies/${movieId}`,
@@ -54,7 +55,7 @@ const MovieInfo = () => {
           <iframe
             className="video-iframe"
             src={movie.video_url}
-            frameborder="0"
+            frameBorder="0"
           ></iframe>
         </div>
       </div>
