@@ -11,6 +11,7 @@ const MovieInfo = () => {
   let { movieId } = useParams();
 
   useEffect(() => {
+
     axios({
       method: "get",
       url: `http://localhost:3004/movies/${movieId}`,
@@ -27,7 +28,7 @@ const MovieInfo = () => {
       <div className="movie-info-content">
         <div className="movie-info">
           <div className="movie-info-img-wrapper">
-            <img className="movie-info-img" src={movie.img_url} />
+            <img className="movie-info-img" src={movie.img_url} alt="movie img"/>
           </div>
           <div className="movie-info-description-wrapper">
             <h1 className="movie-info-description-title">{movie.title}</h1>
@@ -41,7 +42,7 @@ const MovieInfo = () => {
                 {movie.rating}
               </li>
               <li className="movie-info-list-item">
-                <img className="movie-info-icon" src={clockIcon} />
+                <img className="movie-info-icon" src={clockIcon} alt="clock icon" />
                 {movie.movie_length} min
               </li>
               <li className="movie-info-list-item">{movie.genre}</li>
@@ -54,7 +55,7 @@ const MovieInfo = () => {
           <iframe
             className="video-iframe"
             src={movie.video_url}
-            frameborder="0"
+            frameBorder="0"
           ></iframe>
         </div>
       </div>
