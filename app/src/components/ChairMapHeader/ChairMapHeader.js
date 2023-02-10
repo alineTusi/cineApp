@@ -12,7 +12,6 @@ const ChairMapHeader = () => {
   const [schedule, setSchedule] = useState({});
   const [movie, setMovie] = useState({});
   let { scheduleId } = useParams();
-  let { movieId } = useParams();
 
   useEffect(() => {
     if (scheduleId) {
@@ -40,16 +39,14 @@ const ChairMapHeader = () => {
         setMovie(response.data);
       });
     }
-    // console.log("date", format(new Date(schedule.date), "dd-MM-yyyy"));
-    console.log("time", schedule.time);
   }, [schedule]);
 
-  const formatDate = (date) =>{
-    if (!date){
-     return '' 
+  const formatDate = (date) => {
+    if (!date) {
+      return "";
     }
-    return format(new Date(date), 'dd-MM-yyyy')
-  }
+    return format(new Date(date), "dd-MM-yyyy");
+  };
 
   return (
     <>
@@ -59,7 +56,9 @@ const ChairMapHeader = () => {
         </ChairMapHeaderImg>
         <ChairMapHeaderInfo>
           <h3>{movie.title}</h3>
-          <h3>{formatDate(schedule.date)} | {schedule.time}</h3>
+          <h3>
+            {formatDate(schedule.date)} | {schedule.time}
+          </h3>
           <h3>Room {schedule.room}</h3>
         </ChairMapHeaderInfo>
       </ChairMapHeaderContainer>

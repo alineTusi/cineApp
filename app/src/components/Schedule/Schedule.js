@@ -12,7 +12,7 @@ import "./Schedule.css";
 const ScheduleRow = ({ day }) => {
 
   const openInfo = (item) => {
-    const url = `http://localhost:3000/chairMapHeader/${item}`;
+    const url = `http://localhost:3000/room/${item}`;
     window.open(url)
   }
   

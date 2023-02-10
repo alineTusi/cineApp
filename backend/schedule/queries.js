@@ -5,7 +5,7 @@ SELECT
 	a.movie_id,
 	date(start_time),
 	SUBSTRING(start_time::text, 12, 5) as time,
-	a.room,
+	a.room_id,
 	a. "language",
 	a.three_dimensional,
 	a.imax
@@ -22,7 +22,7 @@ WHERE
 		a.movie_id,
 		date(start_time),
 		SUBSTRING(start_time::text, 12, 5) as time,
-		a.room,
+		a.room_id,
 		a. "language",
 		a.three_dimensional,
 		a.imax

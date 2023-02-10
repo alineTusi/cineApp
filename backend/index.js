@@ -8,8 +8,9 @@ import userLogout from "./models/userLogout.js";
 import usersRegister from "./models/usersRegister.js";
 import movieRouter from "./movies/routes.js";
 import scheduleRouter from "./schedule/routes.js";
-import * as dotenv from 'dotenv'
-dotenv.config()
+import chairRouter from "./chair/routes.js";
+import * as dotenv from "dotenv";
+dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 3006;
@@ -21,7 +22,6 @@ app.use(express.json());
 
 app.use(bodyParser.json());
 
-
 app.listen(PORT, () => {
   console.log(`Server is running on ${PORT}`);
 });
@@ -32,3 +32,4 @@ app.use("/logout", userLogout);
 app.use("/movies", movieRouter);
 app.use("/calendar", calendarRouter);
 app.use("/schedule", scheduleRouter);
+app.use("/chair", chairRouter);
