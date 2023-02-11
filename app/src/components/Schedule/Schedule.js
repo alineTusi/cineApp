@@ -55,9 +55,9 @@ const Schedule = ({ movieId }) => {
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 650 }} aria-label="caption table">
           <TableBody>
-            {rows.map((row, i) => (
+            {rows.map((row) => (
               <>
-                <ScheduleRow day={row}></ScheduleRow>
+                <ScheduleRow row={row.id} day={row}></ScheduleRow>
               </>
             ))}
           </TableBody>

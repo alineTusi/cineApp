@@ -37,6 +37,33 @@ input[type='file'] {
   margin-left: 2em;
 }
 
+#search_bar {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2em;
+  margin-left: 2em;
+}
+
+#search_bar input {
+  width: 300px;
+  height: 50px;
+  border-radius: 0.4em;
+  padding-left: 1em;
+  font-size: 20px;
+  font-weight: 600;
+
+}
+
+#search_bar label{
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 0.8em;
+}
+
+#swiper_slide_main {
+  height: 100px !important
+}
+
 @media only screen and (max-width: 1024px) {
   #gender {
     width: 88%;

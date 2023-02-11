@@ -31,7 +31,14 @@ export const Logo = styled.div`
 `;
 
 export const SignInContainer = styled.div`
-  padding-top: 10em;
+  padding-top: 2em;
+  background-color: black;
+  width: 30%;
+  margin: auto;
+  padding-bottom: 1em;
+  opacity: 0.9;
+  border-radius: 0.8em;
+  box-shadow: 0px 12px 15px black;
 `;
 
 export const TitleContainer = styled.div`
@@ -46,12 +53,12 @@ export const TitleContainer = styled.div`
   }
 `;
 
-export const InputContainer = styled.div`
+export const InputContainer = styled.form`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 1em;
+ 
 
   & input {
     width: 300px;
@@ -68,6 +75,7 @@ export const InputContainer = styled.div`
   & a {
     color: #ffffff;
     text-decoration: none;
+    margin: auto;
     margin-top: 1em;
     text-shadow: 0px 3px 2px black;
   }
@@ -97,3 +105,68 @@ export const InputContainer = styled.div`
     transition: all 0.7s;
   }
 `;
+
+
+export const ModalContainer = styled.div`
+     position: absolute;
+     background-color: black;
+     width: 400px;
+     height: 200px;
+     padding-top: 3em;
+     padding-left: 3em;
+     padding-bottom: 2em;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 0.5em;
+      opacity: 0.9;
+      border-radius: 0.8em;
+      box-shadow: 0px 12px 15px black;
+`;
+
+
+export const ModalInput = styled.div`
+      display: flex;
+      flex-direction: column;
+      width: 150px;
+      
+
+
+
+   & label {
+      color: red;
+      font-size: 18px;
+      padding-bottom:1em;
+     }
+
+  & input {
+    width: 300px;
+    height: 40px;
+    font-size: 15px;
+    border: none;
+    border-radius: 0.4em;
+    box-shadow: 0px 15px 5px black;
+    margin-bottom: 1em;
+    padding-left: 1em;
+  }
+
+  & button {
+    width: 200px;
+    height: 40px;
+    background-color: red;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    cursor: pointer;
+    border: none;
+    border-radius: 0.4em;
+    margin-top: 1em;
+    box-shadow: 0px 5px 2px black;
+  }
+
+  & button:hover {
+    opacity: 0.8;
+    transition: all 0.7s;
+  }
+`;
+

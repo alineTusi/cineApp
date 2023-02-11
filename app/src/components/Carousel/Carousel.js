@@ -10,9 +10,7 @@ import { Autoplay, Pagination, Navigation } from "swiper";
 
 const Carousel = () => {
   const [items, setItems] = useState([]);
-  useEffect(() => {
-    console.log(items);
-  }, [items]);
+  
 
   useEffect(() => {
     axios({
@@ -57,9 +55,9 @@ const Carousel = () => {
         }}
       >
         <div>
-          {items.map((item, i) => (
-            <SwiperSlide key={i} id="swiperSlideCarousel">
-              <img src={item.banner_url} />
+          {items.map((item) => (
+            <SwiperSlide key={item.id} id="swiperSlideCarousel">
+              <img src={item.banner_url} alt="banner"/>
               
             </SwiperSlide>
           ))}

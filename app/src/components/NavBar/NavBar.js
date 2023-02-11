@@ -7,34 +7,33 @@ import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 //import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
-import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import LogoPic from "../../assets/icons/Logo.Pic.svg";
-import UserPic from "../../assets/icons/UserPhoto.png";
-import SearchBar from "../Search/Search";
+import UserLogin from "../UserLginButton/UserLoginButton";
+
 
 //import AdbIcon from "@mui/icons-material/Adb";
 
 const pages = ["home", "about", "contact"];
-const settings = ["Sign In", "Sign Out"];
-const movie = ["Genre"];
 
-function ResponsiveAppBar() {
+
+
+
+function ResponsiveAppBar(props) {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
   const [userMovie, setUserMovie] = React.useState(null);
+ 
+
+  const movie = [`${props.searchByGenre}`, "Fantasy", "Science Fiction", "Mystery", "Adventure"];
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
-
+ 
   const moviesOpenUserMenu = (event) => {
     setUserMovie(event.currentTarget);
   };
@@ -42,13 +41,15 @@ function ResponsiveAppBar() {
     setAnchorElNav(null);
   };
 
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
 
   const movieCloseUserMenu = () => {
     setUserMovie(null);
   };
+
+ 
+
+
+
 
   return (
     <AppBar position="static">
@@ -215,7 +216,7 @@ function ResponsiveAppBar() {
                 >
                   {movie.map((items) => (
                     <MenuItem key={items} onClick={movieCloseUserMenu}>
-                      <Typography textAlign="center">{items}</Typography>
+                      <Typography onClick={props.searchByGenre} textAlign="center">{items}</Typography>
                     </MenuItem>
                   ))}
                 </Menu>
@@ -238,9 +239,6 @@ function ResponsiveAppBar() {
               textDecoration: "none",
             }}
           >
-            {/*<div className="CineGafSecondLogo">
-              <img src={LogoPic} alt="popcorn" />
-          </div>*/}
             <div>
               <p className="CineDescTwo">CineGAF</p>
             </div>
@@ -267,36 +265,8 @@ function ResponsiveAppBar() {
               </Button>
             ))}
           </Box>
-
-          <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="user" img src={UserPic} />
-              </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{ mt: "45px" }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box>
+          <UserLogin />
+      
         </Toolbar>
       </Container>
     </AppBar>

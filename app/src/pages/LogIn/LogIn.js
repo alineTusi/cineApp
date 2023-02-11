@@ -4,17 +4,11 @@ import * as yup from "yup";
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
 import PopcornIcon from "../../assets/icons/popcorn.svg";
-// import { MainContainer, Logo, TitleContainer, InputContainer, SignInContainer, ModalContainer, ModalInput } from './LogIn.style.js';
+import { MainContainer, Logo, TitleContainer, InputContainer, SignInContainer, ModalContainer, ModalInput } from './Login.style.js';
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
-import Navbar from "../../components/NavBar/NavBar";
-import {
-  InputContainer,
-  Logo,
-  MainContainer,
-  SignInContainer,
-  TitleContainer,
-} from "./Login.style";
+import ResponsiveAppBar from "../../components/NavBar/NavBar";
+import UserLogin from "../../components/UserLginButton/UserLoginButton";
 
 const validationSchema = yup.object({
   email: yup
@@ -46,7 +40,7 @@ const LoginForm = () => {
     setShowModal(!showModal);
   };
 
-  console.log(showModal);
+  // console.log(showModal);
 
   const formik = useFormik({
     initialValues: {
@@ -71,18 +65,19 @@ const LoginForm = () => {
           setError(await response.text());
           setPasswordExist(true);
         } else {
-          const json = await response.json();
-          setIsLoggedIn(true);
-          setUser(json.username);
+            setIsLoggedIn(true);
+            setUser(vals.email);
+           
         }
       } catch (error) {
         setError(error.message);
       }
       actions.resetForm();
-    },
+    }
   });
   if (isLoggedIn) {
     navigate("/");
+    
   }
 
   return (
@@ -92,12 +87,12 @@ const LoginForm = () => {
         <p>CineGAF</p>
       </Logo>
       <TitleContainer>
+    
         <h1>Sign In</h1>
       </TitleContainer>
       <SignInContainer>
         <InputContainer
           onSubmit={formik.handleSubmit}
-          encType="multipart/form-data"
         >
           <TextField
             id="email"
@@ -161,16 +156,17 @@ const LoginForm = () => {
           </div>
         </InputContainer>
       </SignInContainer>
-      {/* {showModal ? 
+       {showModal ? 
         <ModalContainer>
-         
             <ModalInput>
+              <label>Email</label>
                 <input placeholder="Email" type="email"></input>
                 <button>Send</button>
                 <button onClick={handleModal}>Close</button>
           </ModalInput>
         </ModalContainer> : ""}
-        {isLoggedIn && <Navbar email={user} />}
+        <UserLogin myemail={user} />
+        {error ? <div></div> : null}
     </MainContainer>
   );
 };
