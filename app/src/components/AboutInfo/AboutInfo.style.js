@@ -50,7 +50,6 @@ export const LearnMoreButton = styled.button`
   background: none;
   color: white;
   border-radius: red;
-
   border-color: #de1002;
 
   @media only screen and (max-width: 1020px) {

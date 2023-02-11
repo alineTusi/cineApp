@@ -65,8 +65,6 @@ export default function Contact() {
         </ContactInfo>
       </Stars>
 
-      {/*Second Section*/}
-
       <CompanyAdressPart>
         <CompanyAdressInfo>
           <CompanyAdressTitle>

@@ -1,6 +1,6 @@
 import React from "react";
 import CameraPic from "../../assets/icons/StudioPic2.jpg";
-
+import { Link } from "react-router-dom";
 import {
   Background,
   CameraBackroundPic,
@@ -36,7 +36,9 @@ const AboutInfo = () => {
             </AboutUsText>
 
             <LearnMore>
-              <LearnMoreButton>Learn More</LearnMoreButton>
+              <Link to="/learnmore">
+                <LearnMoreButton>Learn More</LearnMoreButton>
+              </Link>
             </LearnMore>
           </Description>
         </CameraBackroundPic>

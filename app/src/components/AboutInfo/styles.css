@@ -16,15 +16,10 @@
 .mySlide .swiper-slide {
   display: flex;
   justify-content: flex-end;
-
-  /*align-items: flex-end;*/
   text-align: center;
   font-size: 18px;
-
   color: white;
-
   flex-direction: column;
-
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -105,7 +100,7 @@
 
 @media only screen and (max-width: 750px) {
   .mySlide .swiper-wrapper {
-    height: 130px;
+    height: 450px;
   }
 }
 
@@ -113,43 +108,13 @@
   .mySlide .swiper-slide div {
     width: 100%;
     height: 120px;
-    margin-top: 70px;
-    font-size: 6px;
-  }
-}
-
-/*@media only screen and (max-width: 750px) {
-  .mySlide .FirstSlide h3 {
-    font-size: 7px;
+    font-size: 20px;
   }
 }
 
 @media only screen and (max-width: 750px) {
-  .mySlide .FirstSlide h4 {
-    font-size: 10px;
+  .mySlide .swiper-slide div {
+    height: 200px;
+    margin-top: 250px;
   }
 }
-
-@media only screen and (max-width: 750px) {
-  .mySlide .FirstSlide p {
-    font-size: 5px;
-  }
-}
-
-@media only screen and (max-width: 750px) {
-  .mySlide .SecondSlide h3 {
-    font-size: 7px;
-  }
-}
-
-@media only screen and (max-width: 750px) {
-  .mySlide .SecondSlide h4 {
-    font-size: 10px;
-  }
-}
-
-@media only screen and (max-width: 750px) {
-  .mySlide .SecondSlide p {
-    font-size: 5px;
-  }
-}*/

@@ -4,11 +4,10 @@ export const FormContact = styled.div`
 display: flex;
 
 @media only screen and (max-width: 1020px) {
+
     {
         display: block;
-      
     }
-
 `;
 
 export const SendEmail = styled.div``;
@@ -21,51 +20,47 @@ export const Deskription = styled.div`
 `;
 
 export const ContactForm = styled.h3`
-{/*margin: 60px 0px 0px 240px;*/}
+
 color:#de1002;
 font-family: Rajdhani Semibold,Helvetica,Arial, sans-serif!important;
 font-size: 26px;
 
 @media only screen and (max-width: 1020px) {
     {
-        {/*margin: 60px 0px 0px 150px;*/}
         
-      
+        margin: 20px auto;
+        width: 125%;
     }
 
 `;
 
 export const SendAnEmail = styled.h5`
-{/*margin: 20px 0px 0px 210px;*/}
+margin-top: 0px;
 color:#de1002;
 font-family: Rajdhani Semibold,Helvetica,Arial, sans-serif!important;
 font-size: 24px;
 
 
-margin-top: 0px;
+
 
 @media only screen and (max-width: 1020px) {
     {
-        margin: 20px 0px 0px 150px;
-        
-      
+        margin:auto;
+        width: 140%;
     }
-
-
 `;
 
 export const Line = styled.hr`
 width: 227%;
-{/*margin-left: 210px;*/}
-margin:auto;
+
+
 border-bottom: 0.3px;
 
 @media only screen and (max-width: 1020px) {
     {
-       width: 99%;
+       width: 118%;
        margin-left:0px;
         
-      
     }
 
 `;
@@ -73,51 +68,50 @@ border-bottom: 0.3px;
 //FORM
 
 export const Form = styled.form`
-  margin-right: 40px;
+  margin: auto;
 `;
 
 export const FormName = styled.div`
 display: flex;
-margin: 40px 0px 0px 195.5px;
+margin: 40px 0px 0px 235px;
 
 @media only screen and (max-width: 1020px) {
     {
-        
-        margin-left: 20px;
-        
-      
+        margin: 10px 0px auto;
     }
-
-
-
 `;
 
 export const Name = styled.label`
   margin: 10px 0px 0px 15px;
   color: #de1002;
   font-family: Rajdhani Semibold, Helvetica, Arial, sans-serif !important;
-  font-size: 18px;
+  font-size: 17px;
 `;
 
 export const StarName = styled.p`
   color: yellow;
   margin: 15px 0px 0px 18px;
+
+  @media only screen and (max-width: 1020px) {
+    {
+        margin: 15px 0px 0px 5px;
+      
+    }
 `;
 
 export const UserName = styled.div``;
 
 export const SetUserName = styled.input`
-width: 218%;
+width: 216%;
 height: 30px;
 background-color: black;
 color: white;
-margin-left: 30px;
+margin-left: 32px;
 
 @media only screen and (max-width: 1020px) {
     {
-      width: 150%;
-        
-      
+      width: 125%;
+        margin-left: 28px;
     }
 
 
@@ -125,74 +119,81 @@ margin-left: 30px;
 
 export const FormEmail = styled.div`
 display: flex;
-margin-left:195px;
+margin-left:235px;
 
 
 @media only screen and (max-width: 1020px) {
     {
-        margin-left: 20px;
+       margin: auto;
         
-      
     }
-
+    
 `;
 
 export const Email = styled.label`
   margin: 15px 0px 0px 15px;
   color: #de1002;
   font-family: "Roboto Serif", serif;
-  font-size: 18px;
+  font-size: 17px;
 `;
 
 export const StarEmail = styled.p`
   color: yellow;
   margin: 20px 0px 0px 22px;
+
+  @media only screen and (max-width: 1020px) {
+    {
+        margin-left: 10px;
+        
+    }
+
 `;
 
 export const UserEmail = styled.div``;
 
 export const SetUserEmail = styled.input`
-width: 216%;
+width: 215%;
 height: 30px;
 background-color: black;
 color: white;
-margin: 10px 0px 0px 32px;
+margin: 10px 0px 0px 33px;
 
 @media only screen and (max-width: 1020px) {
     {
-      width: 150%;
+      width: 125%;
+      margin: 10px 0px 0px 28px;
         
-      
     }
 
 `;
 
-//TEXT AREA
+//MESAGE AREA
 
 export const MessageArea = styled.div`
 display: flex; 
+margin-left: 203px;
 
 @media only screen and (max-width: 1020px) {
     {
-      display: block;
+
         
-      
+        margin: 30px 0px auto;
     }
 
 `;
 
 export const Mesage = styled.label`
 color: #de1002;
-margin: 80px 0px 0px 209px;
+{/*margin: 80px 0px 0px 209px;*/}
+margin-top: 80px;
+margin-left: 45px;
+font-size: 17px;
 
 @media only screen and (max-width: 1020px) {
     {
-     margin-left: 200px;
+    margin: 80px 0px 0px 15px;
         
-      
     }
-
-
 `;
 
 export const StarMessage = styled.p`
@@ -201,22 +202,23 @@ margin: 85px 0px 0px 5px;
 
 @media only screen and (max-width: 1020px) {
     {
-        margin: 25px 0px 0px 230px;
+        margin-left:0px;
         
-      
     }
 
 `;
 
 export const TextArea = styled.textarea`
-margin: 20px 0px 0px 31.5px;
+margin: 20px 0px 0px 35.5px;
 background: black;
 background-color: black;
 color: white;
 
 @media only screen and (max-width: 1020px) {
     {
-      width: 95%;
+      width: 80%;
+      margin: auto 20px 25px;
+
         
       
     }
@@ -224,15 +226,16 @@ color: white;
 `;
 
 export const SendEmailButton = styled.button`
-margin: 30px 0px 0px 313px;
-width: 90px;
+margin: 30px 0px 0px 355px;
+
 height: 35px;
 background:#de1002; 
 color: white;
 
 @media only screen and (max-width: 1020px) {
     {
-        margin-left:200px;
+        width: 10%;
+        margin:auto   170px ;
         
       
     }
@@ -245,15 +248,15 @@ color: white;
 export const Photo = styled.div``;
 
 export const PopCorn = styled.img`
-width: 73%;
+width: 70%;
 height: 420px;
 margin: 90px 0px 0px 140px;
 
 
 @media only screen and (max-width: 1020px) {
     {
-        width: 70%;
-        margin: 70px 0px 0px 70px;
+        width: 90%;
+        margin: 20px 0px 0px 20px;
         
       
     }

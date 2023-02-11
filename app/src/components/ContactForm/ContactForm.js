@@ -54,7 +54,7 @@ const ContactEmail = () => {
       });
 
       axios
-        .post("http://localhost:5500/user")
+        .post("http://localhost:3006/user")
         .then((res) => {
           setUser_Email(res.body);
           setUserName(res.body);
@@ -103,7 +103,7 @@ const ContactEmail = () => {
             </UserEmail>
           </FormEmail>
 
-          {/*TEXT AREA*/}
+          {/*MESAGE AREA*/}
 
           <MessageArea>
             <Mesage htmlFor="message">Message</Mesage>

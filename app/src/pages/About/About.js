@@ -5,7 +5,7 @@ import AboutSwiper from "../../components/AboutInfo/AboutSwiper";
 import AboutInfo from "../../components/AboutInfo/AboutInfo";
 import ContactButton from "../../components/ContactForm/ContactButton";
 
-import Icons from "../../components/AboutInfo/Logos";
+import Icons from "../../components/AboutInfo/Pictures";
 import {
   AboutBackground,
   StarsBackround,

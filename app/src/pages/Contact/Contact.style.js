@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 
 export const ContactPage = styled.main`
   background-color: black;
-  height: 1800px;
+  height: 1500px;
   margin: 0%;
   padding: 0%;
 `;
@@ -25,6 +25,7 @@ export const ContactInfo = styled.div`
     {
      display: block;
      margin-top: 80px;
+     width: 97%;
     }
 
 `;
@@ -33,6 +34,8 @@ export const ContactInfoLeft = styled.h3`
   color: white;
   font-family: "Roboto Serif", serif;
   font-size: 30px;
+  
+
 
   @media only screen and (max-width: 1020px) {
     {
@@ -58,7 +61,7 @@ export const YouAreHere = styled.h4`
 
 export const Slash1 = styled.p`
   color: white;
-  padding: 24px 0px 0px 10px;
+  padding: 27px 0px 0px 10px;
 `;
 
 export const HomeInfo = styled.h4`
@@ -71,7 +74,7 @@ export const HomeInfo = styled.h4`
 
 export const Slash2 = styled.p`
   color: white;
-  padding: 24px 0px 0px 10px;
+  padding: 28px 0px 0px 10px;
 `;
 
 export const ContactInfoRight = styled.h4`
@@ -107,7 +110,7 @@ color:white;
 `;
 
 export const CompanyAdressInfo = styled.div`
-margin-left: 35px;
+margin-left: 65px;
 
 @media only screen and (max-width: 1020px) {
     {
