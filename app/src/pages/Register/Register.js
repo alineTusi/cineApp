@@ -57,7 +57,7 @@ import { useNavigate } from 'react-router-dom';
             }  else {
               console.log("hello")
           try {
-            const response = await fetch("http://localhost:3004/register", {
+            const response = await fetch("http://app-15d2875f-7563-4baf-864b-3beec4034cb4.cleverapps.io/register", {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",

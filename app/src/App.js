@@ -4,7 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import MovieInfo from "./components/MovieInfo/MovieInfo";
 import Room from "./components/Room/Room";
 import Home from "./pages/Home/Home";
-import LoginForm from "./pages/LogIn/Login.js";
+import LoginForm from "./pages/LogIn/LogIn.js";
 import Register from "./pages/Register/Register.js";
 
 // import About from "./pages/About/About";

@@ -14,7 +14,7 @@ const MovieInfo = () => {
 
     axios({
       method: "get",
-      url: `http://localhost:3004/movies/${movieId}`,
+      url: `http://app-15d2875f-7563-4baf-864b-3beec4034cb4.cleverapps.io/movies/${movieId}`,
       headers: {
         "Access-Control-Allow-Origin": "*",
       },

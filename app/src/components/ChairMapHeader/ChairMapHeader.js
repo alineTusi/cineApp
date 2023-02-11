@@ -17,7 +17,7 @@ const ChairMapHeader = () => {
     if (scheduleId) {
       axios({
         method: "get",
-        url: `http://localhost:3004/schedule/${scheduleId}`,
+        url: `http://app-15d2875f-7563-4baf-864b-3beec4034cb4.cleverapps.io/schedule/${scheduleId}`,
         headers: {
           "Access-Control-Allow-Origin": "*",
         },
@@ -31,7 +31,7 @@ const ChairMapHeader = () => {
     if (schedule.movie_id) {
       axios({
         method: "get",
-        url: `http://localhost:3004/movies/${schedule.movie_id}`,
+        url: `http://app-15d2875f-7563-4baf-864b-3beec4034cb4.cleverapps.io/movies/${schedule.movie_id}`,
         headers: {
           "Access-Control-Allow-Origin": "*",
         },
