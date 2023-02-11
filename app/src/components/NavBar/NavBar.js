@@ -7,7 +7,7 @@ const Navbar = (props) => {
   const navigate= useNavigate()
 
   const handleLogout = async () => {
-    await fetch('http://localhost:3004/logout');
+    await fetch('http://app-15d2875f-7563-4baf-864b-3beec4034cb4.cleverapps.io/logout');
     setIsLoggedOut(true);
   };
 
