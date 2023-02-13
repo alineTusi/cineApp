@@ -36,10 +36,6 @@ import { useNavigate } from 'react-router-dom';
           const recaptchaRef = React.createRef();
           const navigate = useNavigate()
 
-         
-
-
-
           const formik = useFormik({
           initialValues: { gender: "",fname: "", lname:"", 
           username: "", phoneNumber:"", email: "", repeatEmail: "",
