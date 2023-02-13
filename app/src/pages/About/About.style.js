@@ -1,123 +1,131 @@
 import styled from "@emotion/styled";
 
-export const AboutBackground=styled.main`
-background: black; 
-height: auto; 
-
-
+export const AboutBackground = styled.main`
+  background: black;
+  height: 1500px;
 `;
 
-
-export const Main=styled.main`
-background-color: black;
-height: 1500px;
-margin:auto;
+export const StarsBackround = styled.div`
+  width: 100%;
+  height: 250px;
 `;
 
-export const StarsBackround=styled.div`
-height: 250px;
+export const AboutInfoPart = styled.div`
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  background-color: rgba(37, 34, 34, 0.5);
+  margin: auto;
+  margin-top: 90px;
+  height: 95px;
+  position: absolute;
 
-
-`;
-
-
-export const ContactPart=styled.div`
-display: flex;
-color: white;
-width: 150px;
-height: 150px;
-position: absolute; 
-  
-
-
-`;
-
-export const BoxContact=styled.div`
+  @media only screen and (max-width: 1020px) {
+    {
+     
+   display: block;
+   margin-top: 50px;
    
-color: white;
-width: 1003%;
-height: 70%;
-position: absolute;
-top: 0;
-left: 0px;
-opacity: 0.4;
-background: black;
-margin-top: 75px;
+      
+    }
+
+`;
+
+export const AboutLeft = styled.div`
+
+@media only screen and (max-width: 1020px) {
+  {
+   
+ display: flex;
+ justify-content: center;
+ 
+    
+  }
+
+
+`;
+
+export const AboutTitleLeft = styled.h3`
+  color: white;
+ {/* padding-right: 400px;*/}
+  font-family: "Roboto Serif", serif;
+  font-size: 30px;
+ 
+
+  @media only screen and (max-width: 1020px) {
+    {
+   
+    
+      
+    }
+
+`;
+
+export const AboutTitlesRight = styled.div`
+  display: flex;
+
+  @media only screen and (max-width: 1020px) {
+    {
+     
+    padding-left: 50px;
+      
+    }
+
+`;
+
+export const YouAre = styled.h4`
+  color: white;
+  font-family: "Roboto Serif", serif;
+  font-size: 20px;
+  padding-top: 13px;
+ 
+ 
+
+  @media only screen and (max-width: 1020px) {
+    {
+     
   
+      
+    }
+
+
+  `;
+
+export const Slash1 = styled.p`
+  color: white;
+  padding: 24px 0px 0px 10px;
+`;
+
+export const Home = styled.h4`
+  color: #972223;
+  font-family: "Roboto Serif", serif;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 15px 0px 0px 10px;
+
+  @media only screen and (max-width: 1020px) {
+    {
+     
+      @media only screen and (max-width: 1020px) {
+        {
+         
+     
+          
+        }
+      
+    }
 
 `;
 
-export const OverlayContact=styled.div`
-display: flex;
-margin-top: 0px;
-z-index: 9;
-color: #fff;
-padding: 70px 0px 0px 80px;
-font-size: 30px;
-    
+export const Slash2 = styled.p`
+  color: white;
+  padding: 24px 0px 0px 10px;
 `;
 
-export const ConTitle=styled.div`
-margin-left: 185px;
-font-family: Rajdhani Semibold,Helvetica,Arial, sans-serif!important;
+export const AboutRight = styled.h4`
+  color: white;
+  font-family: "Roboto Serif", serif;
+  font-size: 20px;
 
-
-@media only screen and (max-width: 750px) {
-    
-    margin-left: 100px;
-    
-}
-
+  padding: 15px 0px 0px 10px;
 `;
-
-export const ConInfo=styled.div`
-margin:40px 0px 0px 565px;
-
-
-`;
-
-export const ListInfo=styled.div`
-display: flex;
-list-style: none;
-font-size: 20px;
-margin-left: 40px;
-
-
-`;
-
-export const YouAre=styled.li`
-padding-left: 20px;
-width: 130px;
-
-
-
-`;
-
-export const Slash1=styled.li`
-padding-left: 10px;
-
-`;
-
-export const Home=styled.li`
-padding-left: 10px;
-color:red;
-text-decoration: none; 
-
-
-
-
-
-`;
-
-export const Slash2=styled.li`
-padding-left: 10px;
-
-`;
-
-export const ConTact=styled.li`
-padding-left: 10px;
-
-`;
-
-
-

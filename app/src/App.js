@@ -1,28 +1,24 @@
-// import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
-// import ChairMapHeader from "./components/ChairMapHeader/ChairMapHeader";
 import MovieInfo from "./components/MovieInfo/MovieInfo";
 import Room from "./components/Room/Room";
 import Home from "./pages/Home/Home";
-import LoginForm from "./pages/LogIn/LogIn.js";
+import LoginForm from "./pages/LogIn/Login";
 import Register from "./pages/Register/Register.js";
-
-// import About from "./pages/About/About";
+import About from "./pages/About/About";
+import Contact from "./pages/Contact/Contact";
 
 function App() {
-  // const [movieId, setMovieId] = useState(1);
   return (
     <>
-    
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/login" element={<LoginForm />} />
-        <Route path="/register" element={< Register />} />
-         {/* <Route path="About" element={<About />} /> */}
+        <Route path="/register" element={<Register />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="movieInfo/:movieId" element={<MovieInfo />} />
         <Route path="room/:scheduleId" element={<Room />} />
-        {/* <Route path="chairMapHeader/:scheduleId" element={<ChairMapHeader />} /> */}
-      
       </Routes>
     </>
   );

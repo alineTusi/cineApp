@@ -1,9 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
-
 body {
   margin: 0;
   font-family: 'Roboto', 'serif';
@@ -30,6 +24,11 @@ code {
 
 input[type='file'] {
   color: white;
+}
+
+#register-form {
+  margin-top: 3em;
+
 }
 
 #label-gender {

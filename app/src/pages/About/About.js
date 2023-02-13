@@ -1,24 +1,23 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import BackgroundPic from "../../assets/icons/Stars2.jpg";
-import AboutSwiper from "./AboutSwiper";
-// import AboutInfo from "./AboutInfo";
+import BackgroundPic from "../../assets/icons/Stars2.jpg";
+import AboutSwiper from "../../components/AboutInfo/AboutSwiper";
+import AboutInfo from "../../components/AboutInfo/AboutInfo";
+import ContactButton from "../../components/ContactForm/ContactButton";
 
-// import Icons from "./Logos";
+import Icons from "../../components/AboutInfo/Logos";
 import {
   AboutBackground,
   StarsBackround,
-  ContactPart,
-  BoxContact,
-  OverlayContact,
-  ConTitle,
-  ConInfo,
-  ListInfo,
+  AboutInfoPart,
+  AboutLeft,
+  AboutTitleLeft,
+  AboutTitlesRight,
   YouAre,
   Slash1,
   Home,
   Slash2,
-  ConTact,
+  AboutRight,
 } from "./About.style";
 
 export default function About() {
@@ -26,39 +25,33 @@ export default function About() {
     <AboutBackground>
       <StarsBackround
         style={{
-          // backgroundImage: `url(${BackgroundPic})`,
+          backgroundImage: `url(${BackgroundPic})`,
           backgroundSize: "cover",
         }}
       >
-        <ContactPart>
-          <BoxContact></BoxContact>
+        <AboutInfoPart>
+          <AboutLeft>
+            <AboutTitleLeft>About </AboutTitleLeft>
+          </AboutLeft>
 
-          <OverlayContact>
-            <ConTitle>
-              <h3>About</h3>
-            </ConTitle>
+          <AboutTitlesRight>
+            <YouAre>You are here:</YouAre>
 
-            <ConInfo>
-              <ListInfo>
-                <YouAre>You are here:</YouAre>
+            <Slash1>/</Slash1>
 
-                <Slash1>/</Slash1>
+            <Link style={{ textDecoration: "none" }} to="/">
+              <Home>Home</Home>
+            </Link>
 
-                <Link style={{ textDecoration: "none" }} to="/">
-                  <Home>Home</Home>
-                </Link>
+            <Slash2>/</Slash2>
 
-                <Slash2>/</Slash2>
-
-                <ConTact>About</ConTact>
-              </ListInfo>
-            </ConInfo>
-          </OverlayContact>
-        </ContactPart>
+            <AboutRight>About</AboutRight>
+          </AboutTitlesRight>
+        </AboutInfoPart>
       </StarsBackround>
 
       <div>
-        {/* <AboutInfo /> */}
+        <AboutInfo />
       </div>
 
       <div>
@@ -66,8 +59,10 @@ export default function About() {
       </div>
 
       <div>
-        {/* <Icons /> */}
+        <Icons />
       </div>
+
+      <ContactButton />
     </AboutBackground>
   );
 }
