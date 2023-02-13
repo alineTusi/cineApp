@@ -28,7 +28,7 @@ import {
   Mesage,
   StarMessage,
   PopCorn,
-  SendEmailButton,
+  EmailButton,
   Photo,
 } from "./ContactForm.style";
 
@@ -103,8 +103,6 @@ const ContactEmail = () => {
             </UserEmail>
           </FormEmail>
 
-          {/*MESAGE AREA*/}
-
           <MessageArea>
             <Mesage htmlFor="message">Message</Mesage>
 
@@ -117,14 +115,11 @@ const ContactEmail = () => {
               cols="57"
             ></TextArea>
           </MessageArea>
-
-          <SendEmailButton
-            onSubmit={submitHandler}
-            style={{ width: "12%", height: "40px" }}
-            type="submit"
-          >
-            Send Email
-          </SendEmailButton>
+          <EmailButton>
+            <div onSubmit={submitHandler} type="submit">
+              Send Email
+            </div>
+          </EmailButton>
         </Form>
       </SendEmail>
       <Photo>

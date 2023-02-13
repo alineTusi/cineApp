@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 
 export const ContactPage = styled.main`
   background-color: black;
-  height: 1500px;
+  height: 100%;
   margin: 0%;
   padding: 0%;
 `;
@@ -84,8 +84,6 @@ export const ContactInfoRight = styled.h4`
 
   padding: 15px 0px 0px 10px;
 `;
-
-//SECOND SECTION
 
 export const CompanyAdressPart = styled.div`
 display: flex;

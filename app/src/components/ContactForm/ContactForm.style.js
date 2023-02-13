@@ -65,8 +65,6 @@ border-bottom: 0.3px;
 
 `;
 
-//FORM
-
 export const Form = styled.form`
   margin: auto;
 `;
@@ -82,7 +80,7 @@ margin: 40px 0px 0px 235px;
 `;
 
 export const Name = styled.label`
-  margin: 10px 0px 0px 15px;
+  margin: 40px 0px 0px 15px;
   color: #de1002;
   font-family: Rajdhani Semibold, Helvetica, Arial, sans-serif !important;
   font-size: 17px;
@@ -90,11 +88,11 @@ export const Name = styled.label`
 
 export const StarName = styled.p`
   color: yellow;
-  margin: 15px 0px 0px 18px;
+  margin: 45px 0px 0px 18px;
 
   @media only screen and (max-width: 1020px) {
     {
-        margin: 15px 0px 0px 5px;
+        margin: 45px 0px 0px 5px;
       
     }
 `;
@@ -102,18 +100,17 @@ export const StarName = styled.p`
 export const UserName = styled.div``;
 
 export const SetUserName = styled.input`
-width: 216%;
-height: 30px;
+width: 170%;
+height: 20px;
 background-color: black;
 color: white;
 margin-left: 32px;
 
 @media only screen and (max-width: 1020px) {
     {
-      width: 125%;
-        margin-left: 28px;
+      width: 90%;
+        margin-left: 31px;
     }
-
 
 `;
 
@@ -125,7 +122,6 @@ margin-left:235px;
 @media only screen and (max-width: 1020px) {
     {
        margin: auto;
-        
     }
     
 `;
@@ -152,22 +148,20 @@ export const StarEmail = styled.p`
 export const UserEmail = styled.div``;
 
 export const SetUserEmail = styled.input`
-width: 215%;
-height: 30px;
+width: 170%;
+height: 20px;
 background-color: black;
 color: white;
 margin: 10px 0px 0px 33px;
 
 @media only screen and (max-width: 1020px) {
     {
-      width: 125%;
-      margin: 10px 0px 0px 28px;
+      width: 90%;
+      margin: 10px 0px 0px 31px;
         
     }
 
 `;
-
-//MESAGE AREA
 
 export const MessageArea = styled.div`
 display: flex; 
@@ -175,8 +169,6 @@ margin-left: 203px;
 
 @media only screen and (max-width: 1020px) {
     {
-
-        
         margin: 30px 0px auto;
     }
 
@@ -191,7 +183,7 @@ font-size: 17px;
 
 @media only screen and (max-width: 1020px) {
     {
-    margin: 80px 0px 0px 15px;
+    margin: 70px 0px 0px 15px;
         
     }
 `;
@@ -202,7 +194,7 @@ margin: 85px 0px 0px 5px;
 
 @media only screen and (max-width: 1020px) {
     {
-        margin-left:0px;
+        margin: 75px 0px 0px 5px;
         
     }
 
@@ -216,34 +208,26 @@ color: white;
 
 @media only screen and (max-width: 1020px) {
     {
-      width: 80%;
+      width: 62%;
       margin: auto 20px 25px;
-
-        
-      
     }
 
 `;
 
-export const SendEmailButton = styled.button`
-margin: 30px 0px 0px 355px;
+export const EmailButton = styled.button`
+  width: 15%;
+  height: 40px;
+  color: white;
+  background: red;
+  margin: 20px 0px 0px 355px;
 
-height: 35px;
-background:#de1002; 
-color: white;
-
-@media only screen and (max-width: 1020px) {
+  @media only screen and (max-width: 1020px) {
     {
-        width: 10%;
-        margin:auto   170px ;
-        
-      
+       margin-left: 150px;
+       width: 25%;
     }
 
-
 `;
-
-//Picture
 
 export const Photo = styled.div``;
 
@@ -258,7 +242,6 @@ margin: 90px 0px 0px 140px;
         width: 90%;
         margin: 20px 0px 0px 20px;
         
-      
     }
 
 `;

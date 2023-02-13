@@ -4,8 +4,8 @@ import BackgroundPic from "../../assets/icons/Stars2.jpg";
 import AboutSwiper from "../../components/AboutInfo/AboutSwiper";
 import AboutInfo from "../../components/AboutInfo/AboutInfo";
 import ContactButton from "../../components/ContactForm/ContactButton";
+import Footer from "../../components/Footer/Footer";
 
-import Icons from "../../components/AboutInfo/Pictures";
 import {
   AboutBackground,
   StarsBackround,
@@ -58,9 +58,7 @@ export default function About() {
         <AboutSwiper />
       </div>
 
-      <div>
-        <Icons />
-      </div>
+      <Footer />
 
       <ContactButton />
     </AboutBackground>

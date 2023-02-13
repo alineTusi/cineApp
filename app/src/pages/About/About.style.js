@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 
 export const AboutBackground = styled.main`
   background: black;
-  height: 1500px;
+  height: 100%;
 `;
 
 export const StarsBackround = styled.div`

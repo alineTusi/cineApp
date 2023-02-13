@@ -10,6 +10,8 @@ export default class PaymentForm extends React.Component {
     focus: "",
     name: "",
     number: "",
+    error: "",
+    success: "",
   };
 
   handleInputFocus = (e) => {
@@ -22,10 +24,31 @@ export default class PaymentForm extends React.Component {
     this.setState({ [name]: value });
   };
 
+  handleSubmit = (e) => {
+    e.preventDefault();
+    if (
+      !this.state.number ||
+      !this.state.name ||
+      !this.state.expiry ||
+      !this.state.cvc
+    ) {
+      this.setState({ error: "All fields are required." });
+      return;
+    }
+    this.setState({
+      error: "",
+      success: "Payment Successful!",
+    });
+  };
+
   render() {
     return (
       <div className="PaymentContainer">
         <div id="PaymentForm" className="PaymentForm">
+          {this.state.error && <div className="error">{this.state.error}</div>}
+          {this.state.success && (
+            <div className="success">{this.state.success}</div>
+          )}
           <Cards
             cvc={this.state.cvc}
             expiry={this.state.expiry}
@@ -33,7 +56,7 @@ export default class PaymentForm extends React.Component {
             name={this.state.name}
             number={this.state.number}
           />
-          <form className="">
+          <form onSubmit={this.handleSubmit} className="">
             <input
               type="tel"
               name="number"
@@ -56,12 +79,13 @@ export default class PaymentForm extends React.Component {
               onFocus={this.handleInputFocus}
             />
             <input
-              type="tel"
+              type="text"
               name="cvc"
               placeholder="CVC"
               onChange={this.handleInputChange}
               onFocus={this.handleInputFocus}
             />
+            <button type="submit">Submit</button>
           </form>
         </div>
       </div>

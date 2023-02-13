@@ -1,9 +1,6 @@
 import styled from "@emotion/styled";
 
-export const Background = styled.main`
-  background: black;
-  height: auto;
-`;
+export const Background = styled.main``;
 
 export const CameraBackroundPic = styled.div`
   width: 100%;
@@ -25,7 +22,7 @@ export const AboutUsTitle = styled.h1`
 
   @media only screen and (max-width: 1020px) {
      {
-      margin-top: 50px;
+      margin-top: 80px;
     }
   }
 `;

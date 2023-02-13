@@ -4,6 +4,7 @@ import StarsBackground from "../../assets/icons/Stars2.jpg";
 import ContactMap from "../../components/ContactForm/ContactMap";
 import ContactButton from "../../components/ContactForm/ContactButton";
 import ContactEmail from "../../components/ContactForm/ContactForm";
+import Footer from "../../components/Footer/Footer";
 import {
   ContactPage,
   Stars,
@@ -128,6 +129,7 @@ export default function Contact() {
         <ContactMap />
       </Map>
 
+      <Footer />
       <ContactButton />
     </ContactPage>
   );
