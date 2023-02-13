@@ -21,7 +21,7 @@ const MovieInfo = () => {
     }).then(function (response) {
       setMovie(response.data);
     });
-  }, []);
+  }, [movieId]);
 
   return (
     <div className="movie-info-container">
@@ -55,6 +55,7 @@ const MovieInfo = () => {
           <iframe
             className="video-iframe"
             src={movie.video_url}
+            title="video"
             frameBorder="0"
           ></iframe>
         </div>
