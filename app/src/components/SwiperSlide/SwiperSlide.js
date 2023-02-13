@@ -8,7 +8,22 @@ import "swiper/css/navigation";
 import PlayIcon from "../../assets/icons/play.svg";
 
 const SwiperContainer = (props) => {
-  
+ 
+const SwiperContainer = () => {
+  const [items, setItems] = useState([]);
+  useEffect(() => {}, [items]);
+
+  useEffect(() => {
+    axios({
+      method: "get",
+      url: "http://app-15d2875f-7563-4baf-864b-3beec4034cb4.cleverapps.io/movies",
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+      },
+    }).then(function (response) {
+      setItems(response.data);
+    });
+  }, []);
 
   const openInfo = (item) => {
     const url = `http://localhost:3000/movieInfo/${item.id}`;
@@ -121,6 +136,7 @@ const SwiperContainer = (props) => {
       {props.data.filter(movie => movie.id === 1)
       .map((item, idx) => <h1 key={`dsdadsaasww${item.id}`}>{item.genre}</h1>)
       }
+    <>
       <Swiper
         slidesPerView={5}
         spaceBetween={30}
@@ -167,6 +183,22 @@ const SwiperContainer = (props) => {
                 </SwiperSlide>
               </div>
               )}
+        {items.map((item, i) => {
+          return (
+            <div className="swiperCont" key={`swiperCon${i}`}>
+              <SwiperSlide key={`SwiperSlide${i}`}>
+                <img src={item.img_url} alt="" />
+                <p className="bottom">{item.title}</p>
+
+                <div className="play-icon" onClick={() => openInfo(item)}>
+                  <div className="icon-container">
+                    <img src={PlayIcon} alt="play" />
+                  </div>
+                </div>
+              </SwiperSlide>
+            </div>
+          );
+        })}
       </Swiper>
               {props.data.filter(movie => movie.id === 12)
               .map((item, idx) => <h1 key={`sadsadsafwqooop${item.id}`}>{item.genre}</h1>)

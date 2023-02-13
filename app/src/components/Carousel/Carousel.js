@@ -10,12 +10,15 @@ import { Autoplay, Pagination, Navigation } from "swiper";
 
 const Carousel = () => {
   const [items, setItems] = useState([]);
+
   
+
+  useEffect(() => {}, [items]);
 
   useEffect(() => {
     axios({
       method: "get",
-      url: "http://localhost:3004/movies/banner",
+      url: "http://app-15d2875f-7563-4baf-864b-3beec4034cb4.cleverapps.io/movies/banner",
       headers: {
         "Access-Control-Allow-Origin": "*",
       },
@@ -55,14 +58,14 @@ const Carousel = () => {
         }}
       >
         <div>
-          {items.map((item) => (
-            <SwiperSlide key={item.id} id="swiperSlideCarousel">
-              <img src={item.banner_url} alt="banner"/>
-              
+            
+          {items.map((item, i) => (
+            <SwiperSlide key={i} id="swiperSlideCarousel">
+              <img src={item.banner_url} alt="banner" />
+
             </SwiperSlide>
           ))}
         </div>
-        
       </Swiper>
     </>
   );

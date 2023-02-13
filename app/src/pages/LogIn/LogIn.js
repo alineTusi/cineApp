@@ -69,6 +69,11 @@ const LoginForm = () => {
         }
       } catch (error) {
         setError(error.message);
+             
+        },
+      });
+      if (isLoggedIn) {
+        navigate('/');
       }
       actions.resetForm();
     }

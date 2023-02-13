@@ -1,16 +1,18 @@
 // import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
+// import ChairMapHeader from "./components/ChairMapHeader/ChairMapHeader";
 import MovieInfo from "./components/MovieInfo/MovieInfo";
+import Room from "./components/Room/Room";
 import Home from "./pages/Home/Home";
 import LoginForm from "./pages/LogIn/Login";
 import Register from "./pages/Register/Register.js";
 import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
 
-// import About from "./pages/About/About";
+
 
 function App() {
-  // const [movieId, setMovieId] = useState(1);
+
   return (
     <>
       <Routes>
@@ -21,6 +23,10 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="room/:scheduleId" element={<Room />} />
+       
+      
+
       </Routes>
     </>
   );
