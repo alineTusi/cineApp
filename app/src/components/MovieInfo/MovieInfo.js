@@ -28,11 +28,14 @@ const MovieInfo = () => {
       <div className="movie-info-content">
         <div className="movie-info">
           <div className="movie-info-img-wrapper">
-<<<<<<< HEAD
-            <img className="movie-info-img" src={movie.img_url} alt="movie-info"/>
-=======
+
+
             <img className="movie-info-img" src={movie.img_url} alt="movie img"/>
->>>>>>> d76c1dd22b85349d5b498cb1bb500bee3350a286
+
+
+
+         
+
           </div>
           <div className="movie-info-description-wrapper">
             <h1 className="movie-info-description-title">{movie.title}</h1>
@@ -46,11 +49,11 @@ const MovieInfo = () => {
                 {movie.rating}
               </li>
               <li className="movie-info-list-item">
-<<<<<<< HEAD
-                <img className="movie-info-icon" src={clockIcon} movie="clock"/>
-=======
+
+
+
                 <img className="movie-info-icon" src={clockIcon} alt="clock icon" />
->>>>>>> d76c1dd22b85349d5b498cb1bb500bee3350a286
+
                 {movie.movie_length} min
               </li>
               <li className="movie-info-list-item">{movie.genre}</li>

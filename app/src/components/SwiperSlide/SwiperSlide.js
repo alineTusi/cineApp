@@ -167,6 +167,22 @@ const SwiperContainer = (props) => {
                 </SwiperSlide>
               </div>
               )}
+        {props.map((item, i) => {
+          return (
+            <div className="swiperCont" key={`swiperCon${i}`}>
+              <SwiperSlide key={`SwiperSlide${i}`}>
+                <img src={item.img_url} alt="" />
+                <p className="bottom">{item.title}</p>
+
+                <div className="play-icon" onClick={() => openInfo(item)}>
+                  <div className="icon-container">
+                    <img src={PlayIcon} alt="play" />
+                  </div>
+                </div>
+              </SwiperSlide>
+            </div>
+          );
+        })}
       </Swiper>
               {props.data.filter(movie => movie.id === 12)
               .map((item, idx) => <h1 key={`sadsadsafwqooop${item.id}`}>{item.genre}</h1>)
