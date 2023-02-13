@@ -16,7 +16,7 @@ const Carousel = () => {
   useEffect(() => {
     axios({
       method: "get",
-      url: "http://app-15d2875f-7563-4baf-864b-3beec4034cb4.cleverapps.io/movies/banner",
+      url: "https://app-15d2875f-7563-4baf-864b-3beec4034cb4.cleverapps.io/movies/banner",
       headers: {
         "Access-Control-Allow-Origin": "*",
       },

@@ -43,7 +43,7 @@ const Schedule = ({ movieId }) => {
   useEffect(() => {
     axios({
       method: "get",
-      url: `http://app-15d2875f-7563-4baf-864b-3beec4034cb4.cleverapps.io/schedule/movies/${movieId}`,
+      url: `https://app-15d2875f-7563-4baf-864b-3beec4034cb4.cleverapps.io/schedule/movies/${movieId}`,
       headers: {
         "Access-Control-Allow-Origin": "*",
       },

@@ -20,7 +20,7 @@ const ChairMap = ({ scheduleId }) => {
   useEffect(() => {
     axios({
       method: "get",
-      url: `http://app-15d2875f-7563-4baf-864b-3beec4034cb4.cleverapps.io/chair/calendar/${scheduleId}`,
+      url: `https://app-15d2875f-7563-4baf-864b-3beec4034cb4.cleverapps.io/chair/calendar/${scheduleId}`,
       headers: {
         "Access-Control-Allow-Origin": "*",
       },
@@ -86,7 +86,7 @@ const ChairMap = ({ scheduleId }) => {
     console.log("selectedSeats", selectedSeats);
     axios({
       method: "put",
-      url: `http://app-15d2875f-7563-4baf-864b-3beec4034cb4.cleverapps.io/chair/update_seats`,
+      url: `https://app-15d2875f-7563-4baf-864b-3beec4034cb4.cleverapps.io/chair/update_seats`,
       data: {
         seat_ids: selectedSeats,
       },
