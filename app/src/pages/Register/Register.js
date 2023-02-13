@@ -7,7 +7,6 @@ import { MainRegisterContainer, Logo, RegisterTitle,InputFormContainer } from ".
 import "./Register.css";
 import PopcornIcon from "../../assets/icons/popcorn.svg"
 import ReCAPTCHA from 'react-google-recaptcha';
-import FileInput from '../../components/file-input/File-input';
 import { useNavigate } from 'react-router-dom';
 
 
@@ -55,7 +54,7 @@ import { useNavigate } from 'react-router-dom';
               setPassword(!password)
               
             }  else {
-              console.log("hello")
+       
           try {
             const response = await fetch("http://localhost:3004/register", {
               method: "POST",
@@ -76,7 +75,6 @@ import { useNavigate } from 'react-router-dom';
           } catch (error) {
             setError(error.message);
           } 
-          console.log(JSON.stringify(vals, null, 2))
           actions.resetForm()
           const recaptchaValue = recaptchaRef.current.getValue();
           this.props.onSubmit(recaptchaValue);
@@ -240,8 +238,8 @@ import { useNavigate } from 'react-router-dom';
                           </Button>
                       </div>
                 </form>
-                Hello
           </InputFormContainer>
+          {error ? <div></div> : ""}
         </MainRegisterContainer>
           )}
 

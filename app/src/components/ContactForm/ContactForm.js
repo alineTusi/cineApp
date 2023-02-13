@@ -61,9 +61,7 @@ const ContactEmail = () => {
           setUserMessage(res.data.content);
         })
         .catch((err) => {});
-      console.log(username);
-      console.log(user_email);
-      console.log(user_message);
+ 
     }
   };
 

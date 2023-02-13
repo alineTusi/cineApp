@@ -5,7 +5,6 @@ import SearchBar from "../../components/Search/Search";
 import SwiperContainer from "../../components/SwiperSlide/SwiperSlide";
 import axios from "axios";
 import ResponsiveAppBar from "../../components/NavBar/NavBar";
-import SwiperSlider from "../../components/SwiperSlider/SwiperSlider"
 
 const Home = () => {
   const [results, SetResults] = React.useState(null)
@@ -35,8 +34,7 @@ const Home = () => {
   
     const searchResult = items.filter((movie) => movie.title.toLowerCase().includes(e.target.value.toLowerCase()))
     SetResults(searchResult);
-    // console.log(e.target.value)
-    // console.log(results)
+  
   }
 
   return (
@@ -45,7 +43,6 @@ const Home = () => {
       <Carousel />
       <SearchBar searchChange={searchChange} />
       <SwiperContainer data={results !== null ? results : items} />
-      {/* <SwiperSlider /> */}
       <Footer />
     </>
   );

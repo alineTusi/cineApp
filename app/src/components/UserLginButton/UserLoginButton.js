@@ -70,7 +70,6 @@ const UserLogin = ({myemail}) => {
   open={Boolean(anchorElUser)}
   onClose={handleCloseUserMenu}
 >
- {isLoggedIn ? <h2 style={{width:"350px"}}>Welcome, {myemail}</h2> : "" }
    {isLoggedIn ? (
         <button style={{width:"110px", height: "35px", borderRadius: "0.4em", backgroundColor: "red", color:"white", cursor: "pointer"}} onClick={handleLogout}>SignOut</button>
       ) : (

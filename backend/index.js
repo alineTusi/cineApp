@@ -3,9 +3,9 @@ import cors from "cors";
 import express from "express";
 import helmet from "helmet";
 import calendarRouter from "./calendar/routes.js";
-import userAuth from "./models/userAuth.js";
-import userLogout from "./models/userLogout.js";
-import usersRegister from "./models/usersRegister.js";
+import userAuth from "./users/userAuth.js";
+import userLogout from "./users/userLogout.js";
+import usersRegister from "./users/usersRegister.js";
 import movieRouter from "./movies/routes.js";
 import scheduleRouter from "./schedule/routes.js";
 import * as dotenv from 'dotenv'

@@ -7,8 +7,7 @@ import PopcornIcon from "../../assets/icons/popcorn.svg";
 import { MainContainer, Logo, TitleContainer, InputContainer, SignInContainer, ModalContainer, ModalInput } from './Login.style.js';
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
-import ResponsiveAppBar from "../../components/NavBar/NavBar";
-import UserLogin from "../../components/UserLginButton/UserLoginButton";
+
 
 const validationSchema = yup.object({
   email: yup
@@ -40,7 +39,6 @@ const LoginForm = () => {
     setShowModal(!showModal);
   };
 
-  // console.log(showModal);
 
   const formik = useFormik({
     initialValues: {
@@ -165,7 +163,6 @@ const LoginForm = () => {
                 <button onClick={handleModal}>Close</button>
           </ModalInput>
         </ModalContainer> : ""}
-        <UserLogin myemail={user} />
         {error ? <div></div> : null}
     </MainContainer>
   );
