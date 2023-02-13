@@ -5,7 +5,6 @@ import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
-//import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
@@ -15,12 +14,9 @@ import { Link } from "react-router-dom";
 import "./Navbar.css";
 import LogoPic from "../../assets/icons/Logo.Pic.svg";
 import UserPic from "../../assets/icons/UserPhoto.png";
-import SearchBar from "../Search/Search";
-
-//import AdbIcon from "@mui/icons-material/Adb";
 
 const pages = ["home", "about", "contact"];
-const settings = ["Sign In", "Sign Out"];
+const settings = ["Sign In"];
 const movie = ["Genre"];
 
 function ResponsiveAppBar() {
