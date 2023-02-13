@@ -167,7 +167,7 @@ const SwiperContainer = (props) => {
                 </SwiperSlide>
               </div>
               )}
-        {props.map((item, i) => {
+        {props.data.map((item, i) => {
           return (
             <div className="swiperCont" key={`swiperCon${i}`}>
               <SwiperSlide key={`SwiperSlide${i}`}>

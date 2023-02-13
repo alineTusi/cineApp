@@ -4,7 +4,7 @@ import * as yup from "yup";
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
 import PopcornIcon from "../../assets/icons/popcorn.svg";
-import { MainContainer, Logo, TitleContainer, InputContainer, SignInContainer, ModalContainer, ModalInput } from './Login.style.js';
+import { MainContainer, Logo, TitleContainer, InputContainer, SignInContainer, ModalContainer, ModalInput } from './LogIn.style.js';
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 

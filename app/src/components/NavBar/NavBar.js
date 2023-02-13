@@ -21,7 +21,7 @@ import UserLogin from "../UserLginButton/UserLoginButton";
 const pages = ["home", "about", "contact"];
 
 
-function ResponsiveAppBar() {
+function ResponsiveAppBar(props) {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [userMovie, setUserMovie] = React.useState(null);
  
