@@ -4,14 +4,14 @@ export const createCalendarQuery = `INSERT INTO calendar (
   movie_id,
   start_time,
   end_time,
-  room,
+  room_id,
   language,
   three_dimensional,
   imax
 ) VALUES ($1, $2, $3, $4, $5, $6, $7 )`;
 
 export const updateCalendarQuery =
-  "UPDATE calendar SET movie_id = $1, start_time = $2, end_time = $3, room = $4, language = $5, three_dimensional = $6, imax = $7  where id = $8";
+  "UPDATE calendar SET movie_id = $1, start_time = $2, end_time = $3, room_id = $4, language = $5, three_dimensional = $6, imax = $7  where id = $8";
 
 export const partialUpdateCalendarQuery = function (body, id) {
   const params = [];
