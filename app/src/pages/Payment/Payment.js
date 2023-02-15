@@ -41,18 +41,21 @@ export default class PaymentForm extends React.Component {
       success: "Payment Successful!",
     });
 
-    fetch("http://localhost:3006/paymentcard", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        name: this.state.name,
-        number: this.state.number,
-        expiry: this.state.expiry,
-        cvc: this.state.cvc,
-      }),
-    })
+    fetch(
+      "https://app-15d2875f-7563-4baf-864b-3beec4034cb4.cleverapps.io/paymentcard",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: this.state.name,
+          number: this.state.number,
+          expiry: this.state.expiry,
+          cvc: this.state.cvc,
+        }),
+      }
+    )
       .then((response) => response.json())
       .then((data) => console.log(data))
       .catch((error) => console.log(error));

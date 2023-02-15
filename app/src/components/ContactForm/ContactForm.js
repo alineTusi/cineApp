@@ -52,11 +52,14 @@ const ContactEmail = () => {
         theme: "dark",
       });
 
-      fetch("http://localhost:3006/username", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ username, user_email, user_message }),
-      })
+      fetch(
+        "https://app-15d2875f-7563-4baf-864b-3beec4034cb4.cleverapps.io/username",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ username, user_email, user_message }),
+        }
+      )
         .then((response) => response.json())
         .then((data) => console.log(data))
         .catch((error) => console.log(error));
