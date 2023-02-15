@@ -1,6 +1,15 @@
 import express from "express"
+import session from "express-session"
+
 
 const router = express.Router()
+
+router.use(session({
+  secret: 'WVUapR9koEdX0KbK16YKROP0vXCdvkogrf23lrpA',
+  resave: false,
+  saveUninitialized: true,
+  cookie: { secure: true }
+}));
 
 
 router.post('/', (req, res) => {

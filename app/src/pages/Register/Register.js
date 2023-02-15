@@ -7,7 +7,6 @@ import { MainRegisterContainer, Logo, RegisterTitle,InputFormContainer } from ".
 import "./Register.css";
 import PopcornIcon from "../../assets/icons/popcorn.svg"
 import ReCAPTCHA from 'react-google-recaptcha';
-import FileInput from '../../components/file-input/File-input';
 import { useNavigate } from 'react-router-dom';
 
 
@@ -37,10 +36,6 @@ import { useNavigate } from 'react-router-dom';
           const recaptchaRef = React.createRef();
           const navigate = useNavigate()
 
-         
-
-
-
           const formik = useFormik({
           initialValues: { gender: "",fname: "", lname:"", 
           username: "", phoneNumber:"", email: "", repeatEmail: "",
@@ -55,9 +50,9 @@ import { useNavigate } from 'react-router-dom';
               setPassword(!password)
               
             }  else {
-              console.log("hello")
+       
           try {
-            const response = await fetch("http://localhost:3004/register", {
+            const response = await fetch("https://app-15d2875f-7563-4baf-864b-3beec4034cb4.cleverapps.io/register", {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",
@@ -76,7 +71,6 @@ import { useNavigate } from 'react-router-dom';
           } catch (error) {
             setError(error.message);
           } 
-          console.log(JSON.stringify(vals, null, 2))
           actions.resetForm()
           const recaptchaValue = recaptchaRef.current.getValue();
           this.props.onSubmit(recaptchaValue);
@@ -97,7 +91,7 @@ import { useNavigate } from 'react-router-dom';
               <h1>Register Form</h1>
           </RegisterTitle>
           <InputFormContainer>
-              <form onSubmit={formik.handleSubmit} encType="multipart/form-data">
+              <form id="register-form" onSubmit={formik.handleSubmit} encType="multipart/form-data">
                   <div style={{display:"flex", flexDirection:"column"}}>
                   <label htmlFor="gender" id="label-gender">Select Gender*</label>
                             <select name="gender" id="gender" onBlur={formik.handleBlur} onChange={formik.handleChange} value={formik.values.gender} required>
@@ -241,8 +235,8 @@ import { useNavigate } from 'react-router-dom';
                       </div>
                 </form>
           </InputFormContainer>
+          {error ? <div></div> : ""}
         </MainRegisterContainer>
-          );
-          };
+          )}
 
   export default Register
