@@ -57,7 +57,7 @@ const Carousel = () => {
       >
         <div>
           {items.map((item, i) => (
-            <SwiperSlide key={i} id="swiperSlideCarousel">
+            <SwiperSlide key={`SwiperSlide${i}`} id="swiperSlideCarousel">
               <img src={item.banner_url} alt="banner" />
             </SwiperSlide>
           ))}

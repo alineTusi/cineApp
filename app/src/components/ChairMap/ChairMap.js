@@ -124,12 +124,14 @@ const ChairMap = ({ scheduleId }) => {
       <Container>
         <ScreenContainer></ScreenContainer>
 
-        {separateSeats(seats).map((row) => {
+        {separateSeats(seats).map((row, i) => {
+         
           return (
-            <Row>
-              {row.map((seat) => {
+            <Row key={`Row${i}`}>
+              {row.map((seat, i) => {
                 return (
                   <Seat
+                    key={`Seat${i}`}
                     status={seat.status}
                     onClick={() => onSeatClick(seat)}
                   />

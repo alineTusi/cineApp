@@ -22,7 +22,7 @@ const ScheduleRow = ({ day }) => {
       <div className="schedule-date">{day.day}</div>
         {day.schedule.map((row, i) => (
           <>
-            <TableCell component="th" scope="row" className="schedule-tcell">
+            <TableCell component="th" scope="row" className="schedule-tcell" key={`schedule-tcell${i}`}>
               <div onClick={() => openInfo(row.id)}>
                 <ScheduleInfo row={row} />
               </div>
@@ -37,7 +37,7 @@ const ScheduleRow = ({ day }) => {
 const Schedule = ({ movieId }) => {
   const [rows, setrows] = useState([]);
   useEffect(() => {
-    console.log(rows);
+    // console.log(rows);
   }, [rows]);
 
   useEffect(() => {
@@ -50,7 +50,7 @@ const Schedule = ({ movieId }) => {
     }).then(function (response) {
       setrows(response.data);
     }).catch(e =>{
-      console.log(e)
+      // console.log(e)
     });
   }, [movieId]); 
 
@@ -60,9 +60,9 @@ const Schedule = ({ movieId }) => {
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 650 }} aria-label="caption table">
           <TableBody>
-            {rows.map((row) => (
+            {rows.map((row,i) => (
               <>
-                <ScheduleRow row={row.id} day={row}></ScheduleRow>
+                <ScheduleRow row={row.id} day={row} key={`ScheduleRow${i}`}></ScheduleRow>
               </>
             ))}
           </TableBody>
