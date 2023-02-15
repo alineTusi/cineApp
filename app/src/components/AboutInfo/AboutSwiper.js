@@ -5,7 +5,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "./styles.css";
 import { Pagination, Navigation } from "swiper";
-import SwiperPic from "../../assets/icons/6.jpg";
+import SwiperPic from "../../assets/icons/Picture2.jpg";
 
 const AboutSwiper = () => {
   return (

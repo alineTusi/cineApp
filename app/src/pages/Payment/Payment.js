@@ -1,6 +1,7 @@
 import React from "react";
 import Cards from "react-credit-cards";
 import "react-credit-cards/es/styles-compiled.css";
+
 import "./Payment.css";
 
 export default class PaymentForm extends React.Component {
@@ -39,6 +40,22 @@ export default class PaymentForm extends React.Component {
       error: "",
       success: "Payment Successful!",
     });
+
+    fetch("http://localhost:3006/paymentcard", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name: this.state.name,
+        number: this.state.number,
+        expiry: this.state.expiry,
+        cvc: this.state.cvc,
+      }),
+    })
+      .then((response) => response.json())
+      .then((data) => console.log(data))
+      .catch((error) => console.log(error));
   };
 
   render() {

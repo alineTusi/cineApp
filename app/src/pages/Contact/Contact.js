@@ -19,22 +19,18 @@ import {
   CompanyAdressPart,
   CompanyAdressInfo,
   AdressTitle,
-  CompanyLogo,
   CompanyAdressTitle,
   CompanyAdress,
   OfficeHoursePart,
   OfficeInfo,
-  LogoOffice,
   OfficeHoursInfo,
   OfficeHoursTittle,
   EmailPart,
   EmailInfo,
-  LogoEmail,
   Emails,
   EmailTittle,
   PhoneNumbersPart,
   PhoneInfo,
-  LogoPhone,
   PhoneNumbers,
   PhoneNumbersTittle,
   Map,
@@ -69,8 +65,6 @@ export default function Contact() {
       <CompanyAdressPart>
         <CompanyAdressInfo>
           <CompanyAdressTitle>
-            <CompanyLogo></CompanyLogo>
-
             <AdressTitle>Company Adress</AdressTitle>
           </CompanyAdressTitle>
 
@@ -83,8 +77,6 @@ export default function Contact() {
 
         <OfficeHoursePart>
           <OfficeInfo>
-            <LogoOffice></LogoOffice>
-
             <OfficeHoursTittle>Office Hours</OfficeHoursTittle>
           </OfficeInfo>
 
@@ -96,8 +88,6 @@ export default function Contact() {
 
         <EmailPart>
           <EmailInfo>
-            <LogoEmail></LogoEmail>
-
             <EmailTittle>Email</EmailTittle>
           </EmailInfo>
 
@@ -109,8 +99,6 @@ export default function Contact() {
 
         <PhoneNumbersPart>
           <PhoneInfo>
-            <LogoPhone></LogoPhone>
-
             <PhoneNumbersTittle>PhoneNumbers</PhoneNumbersTittle>
           </PhoneInfo>
 

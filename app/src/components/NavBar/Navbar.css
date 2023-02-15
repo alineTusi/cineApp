@@ -1,10 +1,6 @@
 .MuiAppBar-root {
   background-color: black !important;
   height: 100px;
-
-   {
-    /*box-shadow: 0px 30px 50px black !important;*/
-  }
 }
 
 .MuiBox-root {
@@ -20,6 +16,7 @@
 
 .CineDescription {
   font-size: 25px;
+  font-family: "Roboto Serif", serif;
 }
 
 .CineGafSecondLogo img {
@@ -35,19 +32,13 @@
 
 .CineDescTwo {
   padding-right: 20px;
+  font-family: "Roboto Serif", serif;
 }
-
-/*.MuiButtonBase-root::first-letter {
-  text-transform: uppercase;
-}
-
-.MuiButtonBase-root {
-  text-transform: lowercase;
-}*/
 
 @media only screen and (max-width: 738px) {
   .moviesDrop {
     display: none;
+    font-family: "Roboto Serif", serif;
   }
 }
 
@@ -80,111 +71,3 @@
     width: 110%;
   }
 }
-
-/*.MuiAppBar-root {
-  background-color: black !important;
-}
-
-.MuiBox-root {
-}
-
-.SignIn {
-  padding-left: 0px;
-}
-
-.MuiButtonBase-root {
-}
-
-.MoviesDropDown {
-}
-
-.Movies {
-  background-color: black;
-  color: white;
-  font-size: 25px;
-  font-family: "Roboto Serif", serif;
-  border-style: hidden;
-}
-
-.SignIn {
-  background-color: black;
-  color: white;
-  font-size: 20px;
-  font-family: "Roboto Serif", serif;
-  border-style: hidden;
-}
-
-.CineGAFLOGO {
-  display: flex;
-  align-items: center;
-  margin-left: 1em;
-}
-
-.CineGAFLOGO img {
-  width: 30px;
-  height: 50px;
-}
-
-.CineGAFLOGO p {
-  color: red;
-  font-family: "Roboto Serif", serif;
-  font-size: 25px;
-  font-weight: 700;
-  text-align: center;
-  margin-left: 10px;
-}
-
-@media only screen and (max-width: 738px) {
-  .MuiBox-root {
-    /*justify-content: center;
-    width: 50%;
-  }
-}*/
-
-/*@media only screen and (max-width: 750px) {
-  .MuiPaper-root {
-    width: 0%;
-  }
-}
-
-@media only screen and (max-width: 750px) {
-  .CineGAFResponse {
-    width: 10%;
-  }
-}
-
-@media only screen and (max-width: 750px) {
-  .CineGAFResponse img {
-    width: 30%;
-    height: 50px;
-    text-align: center;
-    color: red;
-    margin: auto;
-  }
-}
-
-@media only screen and (max-width: 750px) {
-  .CineGAFResponse p {
-    color: red;
-    margin: auto;
-    font-family: "Roboto Serif", serif;
-  }
-}*/
-
-/*.MuiTypography-root{
-    margin-top: 10px !important;
-}
-
-.MuiButtonBase-root {
-    margin-bottom: 15px !important;
-}
-
-/*.Image{
-    width: 50px;
-    background-color: white;
-    
-}
-
-.img{
-    padding: 10px 0px 0px 45px; 
-}*/

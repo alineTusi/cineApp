@@ -13,7 +13,6 @@ import MenuItem from "@mui/material/MenuItem";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import LogoPic from "../../assets/icons/Logo.Pic.svg";
-import UserPic from "../../assets/icons/UserPhoto.png";
 
 const pages = ["home", "about", "contact"];
 const settings = ["Sign In"];
@@ -69,11 +68,11 @@ function ResponsiveAppBar() {
               <img src={LogoPic} alt="popcorn" />
             </div>
 
-            <div>
+            <div className="">
               <p className="CineDescription">CineGAF</p>
             </div>
           </Typography>
-          {/*tuka da se odelat*/}
+
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={moviesOpenUserMenu} sx={{ p: 0 }}>
@@ -127,7 +126,6 @@ function ResponsiveAppBar() {
               color="inherit"
             >
               <img className="CinemaLogo" src={LogoPic} alt="popcorn" />
-              {/*<MenuIcon />*/}
             </IconButton>
             <Menu
               id="menu-appbar"
@@ -189,7 +187,7 @@ function ResponsiveAppBar() {
                         padding: "opx",
                       }}
                     >
-                      Movies
+                      movies
                     </h3>
                   </button>
                 </Tooltip>
@@ -234,9 +232,6 @@ function ResponsiveAppBar() {
               textDecoration: "none",
             }}
           >
-            {/*<div className="CineGafSecondLogo">
-              <img src={LogoPic} alt="popcorn" />
-          </div>*/}
             <div>
               <p className="CineDescTwo">CineGAF</p>
             </div>
@@ -267,7 +262,7 @@ function ResponsiveAppBar() {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="user" img src={UserPic} />
+                <Avatar alt="" src="/static/images/avatar/2.jpg" />
               </IconButton>
             </Tooltip>
             <Menu

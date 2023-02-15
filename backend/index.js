@@ -9,6 +9,7 @@ import usersRegister from "./models/usersRegister.js";
 import movieRouter from "./movies/routes.js";
 import scheduleRouter from "./schedule/routes.js";
 import usersRouter from "./contactUser/routesUser.js";
+import PaymentRoutes from "./paymentcard/PayRoutes.js";
 
 import * as dotenv from "dotenv";
 
@@ -34,5 +35,5 @@ app.use("/logout", userLogout);
 app.use("/movies", movieRouter);
 app.use("/calendar", calendarRouter);
 app.use("/schedule", scheduleRouter);
-
 app.use("/username", usersRouter);
+app.use("/paymentcard", PaymentRoutes);

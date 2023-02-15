@@ -2,7 +2,6 @@ import React from "react";
 import PopCornPic from "../../assets/icons/CinemaPopcorn.jpg";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import axios from "axios";
 import { useState } from "react";
 
 import {
@@ -53,17 +52,14 @@ const ContactEmail = () => {
         theme: "dark",
       });
 
-      axios
-        .post("http://localhost:3006/user")
-        .then((res) => {
-          setUser_Email(res.body);
-          setUserName(res.body);
-          setUserMessage(res.data.content);
-        })
-        .catch((err) => {});
-      console.log(username);
-      console.log(user_email);
-      console.log(user_message);
+      fetch("http://localhost:3006/username", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ username, user_email, user_message }),
+      })
+        .then((response) => response.json())
+        .then((data) => console.log(data))
+        .catch((error) => console.log(error));
     }
   };
 

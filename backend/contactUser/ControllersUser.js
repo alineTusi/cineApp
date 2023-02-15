@@ -18,7 +18,9 @@ export const createUser = (req, res) => {
     (error, results) => {
       if (error) throw error;
 
-      res.status(201).send("Student was successfully created");
+      res.status(201).json({
+        message: "The message is send sucssesfully",
+      });
     }
   );
 };

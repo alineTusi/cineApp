@@ -66,10 +66,6 @@
 .mySlide .TheTeam {
   display: flex;
   justify-content: center;
-   {
-    /*background-color: black;*/
-  }
-  color: white;
 }
 .mySlide .TheTeam span {
   color: white;

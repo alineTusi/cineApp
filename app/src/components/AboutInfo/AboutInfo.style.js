@@ -12,6 +12,7 @@ export const Description = styled.div`
   flex-direction: column;
   text-align: center;
   color: white;
+
   span {
     color: #de1002;
   }
@@ -19,6 +20,7 @@ export const Description = styled.div`
 
 export const AboutUsTitle = styled.h1`
   margin-top: 80px;
+  font-family: "Roboto Serif", serif;
 
   @media only screen and (max-width: 1020px) {
      {
@@ -28,6 +30,8 @@ export const AboutUsTitle = styled.h1`
 `;
 
 export const AboutUsText = styled.p`
+  font-family: "Roboto Serif", serif;
+  font-size: 20px;
   @media only screen and (max-width: 1020px) {
      {
       margin-top: 0px;

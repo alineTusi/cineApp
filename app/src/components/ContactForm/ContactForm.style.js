@@ -4,7 +4,6 @@ export const FormContact = styled.div`
 display: flex;
 
 @media only screen and (max-width: 1020px) {
-
     {
         display: block;
     }
@@ -22,12 +21,11 @@ export const Deskription = styled.div`
 export const ContactForm = styled.h3`
 
 color:#de1002;
-font-family: Rajdhani Semibold,Helvetica,Arial, sans-serif!important;
+font-family: "Roboto Serif", serif;
 font-size: 26px;
 
 @media only screen and (max-width: 1020px) {
-    {
-        
+    {   
         margin: 20px auto;
         width: 125%;
     }
@@ -37,7 +35,7 @@ font-size: 26px;
 export const SendAnEmail = styled.h5`
 margin-top: 0px;
 color:#de1002;
-font-family: Rajdhani Semibold,Helvetica,Arial, sans-serif!important;
+font-family: "Roboto Serif", serif;
 font-size: 24px;
 
 
@@ -82,13 +80,13 @@ margin: 40px 0px 0px 235px;
 export const Name = styled.label`
   margin: 40px 0px 0px 15px;
   color: #de1002;
-  font-family: Rajdhani Semibold, Helvetica, Arial, sans-serif !important;
+  font-family: "Roboto Serif", serif;
   font-size: 17px;
 `;
 
 export const StarName = styled.p`
   color: yellow;
-  margin: 45px 0px 0px 18px;
+  margin: 45px 0px 0px 22px;
 
   @media only screen and (max-width: 1020px) {
     {
@@ -100,16 +98,16 @@ export const StarName = styled.p`
 export const UserName = styled.div``;
 
 export const SetUserName = styled.input`
-width: 170%;
+width: 153%;
 height: 20px;
 background-color: black;
 color: white;
-margin-left: 32px;
+margin-left: 34px;
 
 @media only screen and (max-width: 1020px) {
     {
-      width: 90%;
-        margin-left: 31px;
+      width: 79%;
+        margin-left: 36px;
     }
 
 `;
@@ -148,7 +146,7 @@ export const StarEmail = styled.p`
 export const UserEmail = styled.div``;
 
 export const SetUserEmail = styled.input`
-width: 170%;
+width: 154%;
 height: 20px;
 background-color: black;
 color: white;
@@ -156,7 +154,7 @@ margin: 10px 0px 0px 33px;
 
 @media only screen and (max-width: 1020px) {
     {
-      width: 90%;
+      width: 80%;
       margin: 10px 0px 0px 31px;
         
     }
@@ -176,10 +174,11 @@ margin-left: 203px;
 
 export const Mesage = styled.label`
 color: #de1002;
-{/*margin: 80px 0px 0px 209px;*/}
+
 margin-top: 80px;
 margin-left: 45px;
 font-size: 17px;
+font-family: "Roboto Serif", serif;
 
 @media only screen and (max-width: 1020px) {
     {
@@ -218,7 +217,7 @@ export const EmailButton = styled.button`
   width: 15%;
   height: 40px;
   color: white;
-  background: red;
+  background: #972223;
   margin: 20px 0px 0px 355px;
 
   @media only screen and (max-width: 1020px) {

@@ -5,6 +5,7 @@ export const Welcome = styled.h1`
   color: white;
   padding-top: 60px;
   font-size: 50px;
+  font-family: "Roboto Serif", serif;
 
   @media only screen and (max-width: 1020px) {
      {
@@ -36,10 +37,11 @@ export const LogoBoxOne = styled.div`
   }
 `;
 
-export const CineGAF = styled.h1`
+export const FirstText = styled.h1`
   margin-top: 60px;
   color: red;
   font-size: 50px;
+  font-family: "Roboto Serif", serif;
   @media only screen and (max-width: 1020px) {
      {
       font-size: 35px;
@@ -64,10 +66,11 @@ export const TextBoxTwo = styled.div`
   }
 `;
 
-export const FirstText = styled.p`
+export const SecondText = styled.p`
   color: white;
   font-size: 30px;
   margin: auto;
+  font-family: "Roboto Serif", serif;
 
   @media only screen and (max-width: 1020px) {
      {
@@ -94,13 +97,14 @@ export const TextBoxThree = styled.div`
   }
 `;
 
-export const SecondText = styled.p`
+export const ThirdText = styled.p`
   font-size: 30px;
   margin: auto;
-
+  font-family: "Roboto Serif", serif;
   @media only screen and (max-width: 1020px) {
      {
       font-size: 16px;
+      margin-top: 20px;
     }
   }
 `;
@@ -124,10 +128,10 @@ export const TextBoxFour = styled.div`
   }
 `;
 
-export const ThirdText = styled.p`
+export const FourthText = styled.p`
   font-size: 30px;
-  margin: auto;
-
+  margin-top: 0px;
+  font-family: "Roboto Serif", serif;
   @media only screen and (max-width: 1020px) {
      {
       font-size: 16px;
@@ -152,9 +156,10 @@ export const TextBoxFive = styled.div`
   }
 `;
 
-export const FourthText = styled.p`
+export const FifthText = styled.p`
   font-size: 30px;
   margin: auto;
+  font-family: "Roboto Serif", serif;
 
   @media only screen and (max-width: 1020px) {
      {
@@ -180,13 +185,15 @@ export const TextBoxSix = styled.div`
   }
 `;
 
-export const FifthText = styled.p`
+export const SixText = styled.p`
   font-size: 30px;
   margin: auto;
+  font-family: "Roboto Serif", serif;
 
   @media only screen and (max-width: 1020px) {
      {
       font-size: 16px;
+      margin-top: 20px;
     }
   }
 `;
