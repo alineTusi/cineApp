@@ -1,15 +1,14 @@
 body {
   margin: 0;
-  font-family: 'Roboto', 'serif';
+  font-family: "Roboto", "serif";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
 
 #gender {
   height: 40px;
@@ -22,13 +21,12 @@ code {
   width: 88%;
 }
 
-input[type='file'] {
+input[type="file"] {
   color: white;
 }
 
 #register-form {
   margin-top: 3em;
-
 }
 
 #label-gender {
@@ -51,17 +49,12 @@ input[type='file'] {
   padding-left: 1em;
   font-size: 20px;
   font-weight: 600;
-
 }
 
-#search_bar label{
+#search_bar label {
   font-size: 25px;
   font-weight: 600;
   margin-bottom: 0.8em;
-}
-
-#swiper_slide_main {
-  height: 100px !important
 }
 
 @media only screen and (max-width: 1024px) {
@@ -69,7 +62,6 @@ input[type='file'] {
     width: 88%;
   }
 }
-
 
 @media only screen and (max-width: 768px) {
   #gender {

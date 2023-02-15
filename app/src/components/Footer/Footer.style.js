@@ -12,7 +12,6 @@ export const MainFooterContainer = styled.div`
   opacity: 0.9;
   box-shadow: 0px 5px grey;
   border-radius: 0.4em;
-  margin-top: 250em;
 `;
 
 export const FooterContainerLeftAndRight = styled.div`
