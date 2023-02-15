@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import {
   Seat,
   Row,
@@ -15,7 +16,6 @@ const ChairMap = ({ scheduleId }) => {
   const [totalValue, setTotalValue] = useState(0);
   const [totalSelected, setTotalSelected] = useState(0);
   const [refetch, setRefetch] = useState(0);
-
 
   useEffect(() => {
     axios({
@@ -96,12 +96,11 @@ const ChairMap = ({ scheduleId }) => {
     })
       .then(function (response) {
         console.log("Seats", response.data);
-        setRefetch(refetch +1); 
+        setRefetch(refetch + 1);
       })
       .catch((e) => {
         console.log(e);
       });
-      
   };
 
   return (
@@ -125,7 +124,6 @@ const ChairMap = ({ scheduleId }) => {
         <ScreenContainer></ScreenContainer>
 
         {separateSeats(seats).map((row, i) => {
-         
           return (
             <Row key={`Row${i}`}>
               {row.map((seat, i) => {
@@ -145,7 +143,10 @@ const ChairMap = ({ scheduleId }) => {
         You have selected <span> {totalSelected} </span> seats for a price of
         <span> {totalValue} </span> €
       </p>
-      <CheckoutBtn onClick={() => checkout()}>Checkout</CheckoutBtn>
+
+      <Link to="/checkout">
+        <CheckoutBtn onClick={() => checkout()}>Checkout</CheckoutBtn>
+      </Link>
     </BodyContainer>
   );
 };
