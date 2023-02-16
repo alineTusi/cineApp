@@ -1,6 +1,6 @@
 import React from "react";
-import Cards from "react-credit-cards";
-import "react-credit-cards/es/styles-compiled.css";
+// import Cards from "react-credit-cards";
+// import "react-credit-cards/es/styles-compiled.css";
 
 import "./Payment.css";
 
@@ -69,13 +69,13 @@ export default class PaymentForm extends React.Component {
           {this.state.success && (
             <div className="success">{this.state.success}</div>
           )}
-          <Cards
+          {/* <Cards
             cvc={this.state.cvc}
             expiry={this.state.expiry}
             focused={this.state.focus}
             name={this.state.name}
             number={this.state.number}
-          />
+          /> */}
           <form onSubmit={this.handleSubmit} className="">
             <input
               type="tel"
