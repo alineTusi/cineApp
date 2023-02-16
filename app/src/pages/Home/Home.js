@@ -4,6 +4,7 @@ import Footer from "../../components/Footer/Footer";
 import SearchBar from "../../components/Search/Search";
 import SwiperContainer from "../../components/SwiperSlide/SwiperSlide";
 import axios from "axios";
+import ResponsiveAppBar from "../../components/NavBar/NavBar";
 
 const Home = () => {
   const [results, SetResults] = React.useState(null);
@@ -34,6 +35,7 @@ const Home = () => {
 
   return (
     <>
+     <ResponsiveAppBar />
       <Carousel />
       <SearchBar searchChange={searchChange} />
       <SwiperContainer data={results !== null ? results : items} />

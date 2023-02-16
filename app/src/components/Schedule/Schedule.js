@@ -8,12 +8,20 @@ import Paper from "@mui/material/Paper";
 import axios from "axios";
 import ScheduleInfo from "../ScheduleInfo/ScheduleInfo";
 import "./Schedule.css";
+import { useNavigate } from "react-router-dom";
 
 const ScheduleRow = ({ day }) => {
 
+  // const openInfo = (item) => {
+  //   const url = `https://app-15d2875f-7563-4baf-864b-3beec4034cb4.cleverapps.io/room/${item}`;
+  //   window.open(url)
+  // }
+
+
+  const navigate = useNavigate()
+  
   const openInfo = (item) => {
-    const url = `http://localhost:3000/room/${item}`;
-    window.open(url)
+    navigate(`/room/${item}`);
   }
   
   return (

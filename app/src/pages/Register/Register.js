@@ -65,7 +65,7 @@ import { useNavigate } from 'react-router-dom';
               setError(await response.text());
             } else {
 
-              navigate('/login')
+              navigate('/SignIn')
 
             }
           } catch (error) {

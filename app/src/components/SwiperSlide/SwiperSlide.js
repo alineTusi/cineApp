@@ -6,12 +6,20 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import PlayIcon from "../../assets/icons/play.svg";
+import { useNavigate} from 'react-router-dom'
 
 const SwiperContainer = (props) => {
+<<<<<<< HEAD
+=======
+ const navigate = useNavigate()
+  
+>>>>>>> d9160712fffb329f54751e2c408673feb3b1c5df
   const openInfo = (item) => {
-    const url = `http://localhost:3000/movieInfo/${item.id}`;
-    window.open(url);
-  };
+    navigate(`/movieInfo/${item.id}`);
+  }
+  
+    
+  
 
   return (
     <div id="swiper_slide_main">
@@ -63,6 +71,7 @@ const SwiperContainer = (props) => {
                   <div className="icon-container">
                     <img src={PlayIcon} alt="play" />
                   </div>
+<<<<<<< HEAD
                 </div>
               </SwiperSlide>
             </div>
@@ -190,6 +199,11 @@ const SwiperContainer = (props) => {
             </div>
           );
         })}
+=======
+                </SwiperSlide>
+              </div>
+              )}
+>>>>>>> d9160712fffb329f54751e2c408673feb3b1c5df
       </Swiper>
       {props.data
         .filter((movie) => movie.id === 12)

@@ -12,11 +12,12 @@ import MenuItem from "@mui/material/MenuItem";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import LogoPic from "../../assets/icons/Logo.Pic.svg";
+import UserLogin from "../UserLginButton/UserLoginButton";
 
 const pages = ["home", "about", "contact"];
 const settings = ["Sign In"];
 const movie = ["Genre"];
-import UserLogin from "../UserLginButton/UserLoginButton";
+
 
 function ResponsiveAppBar(props) {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
