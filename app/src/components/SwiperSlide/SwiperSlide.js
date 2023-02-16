@@ -9,11 +9,8 @@ import PlayIcon from "../../assets/icons/play.svg";
 import { useNavigate} from 'react-router-dom'
 
 const SwiperContainer = (props) => {
-<<<<<<< HEAD
-=======
  const navigate = useNavigate()
   
->>>>>>> d9160712fffb329f54751e2c408673feb3b1c5df
   const openInfo = (item) => {
     navigate(`/movieInfo/${item.id}`);
   }
@@ -23,11 +20,110 @@ const SwiperContainer = (props) => {
 
   return (
     <div id="swiper_slide_main">
-      {props.data
-        .filter((movie) => movie.id === 6)
-        .map((item, idx) => (
-          <h1 key={`uqyruwqyuw${item.id}`}>{item.genre}</h1>
-        ))}
+          {props.data.filter(movie => movie.id === 6)
+              .map((item, idx) => <h1 key={`uqyruwqyuw${item.id}`}>{item.genre}</h1>)
+              }
+              <Swiper
+                slidesPerView={5}
+                spaceBetween={30}
+                slidesPerGroup={3}
+                loop={false}
+                loopFillGroupWithBlank={false}
+                pagination={{
+                  clickable: true,
+                }}
+                navigation={true}
+                modules={[Pagination, Navigation]}
+                className="mySwiper"
+                breakpoints={{
+                  "@0.00": {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                  },
+                  "@0.75": {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                  },
+                  "@1.00": {
+                    slidesPerView: 3,
+                    spaceBetween: 40,
+                  },
+                  "@1.50": {
+                    slidesPerView: 4,
+                    spaceBetween: 50,
+                  },
+                }}
+              >
+                {props.data.filter(movie => movie.genre === "Action")
+                    .map((item, i) => 
+                    <div key={`SwiperConts${item.id}`} className="swiperCont">
+                      <SwiperSlide key={`fajhfafasf${item.id}`}>
+                        <img src={item.img_url} alt="" />
+                        <p className="bottom">{item.title}</p>
+
+                        <div className="play-icon" onClick={() => openInfo(item)}>
+                          <div className="icon-container">
+                            <img src={PlayIcon} alt="play" />
+                          </div>
+                        </div>
+                      </SwiperSlide>
+                    </div>
+                    )}
+              </Swiper>
+
+        {props.data.filter(movie => movie.id === 8)
+              .map((item, idx) => <h1 key={`dsahjs${item.id}`}>{item.genre}</h1>)
+              }
+              <Swiper
+                slidesPerView={5}
+                spaceBetween={30}
+                slidesPerGroup={3}
+                loop={false}
+                loopFillGroupWithBlank={false}
+                pagination={{
+                  clickable: true,
+                }}
+                navigation={true}
+                modules={[Pagination, Navigation]}
+                className="mySwiper"
+                breakpoints={{
+                  "@0.00": {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                  },
+                  "@0.75": {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                  },
+                  "@1.00": {
+                    slidesPerView: 3,
+                    spaceBetween: 40,
+                  },
+                  "@1.50": {
+                    slidesPerView: 4,
+                    spaceBetween: 50,
+                  },
+                }}
+              >
+                {props.data.filter(movie => movie.genre === "Fantasy")
+                    .map((item, i) => 
+                    <div key={`wqerwqweqr${item.id}`} className="swiperCont">
+                      <SwiperSlide>
+                        <img src={item.img_url} alt="" />
+                        <p className="bottom">{item.title}</p>
+
+                        <div className="play-icon" onClick={() => openInfo(item)}>
+                          <div className="icon-container">
+                            <img src={PlayIcon} alt="play" />
+                          </div>
+                        </div>
+                      </SwiperSlide>
+                    </div>
+                    )}
+              </Swiper>
+      {props.data.filter(movie => movie.id === 1)
+      .map((item, idx) => <h1 key={`dsdadsaasww${item.id}`}>{item.genre}</h1>)
+      }
       <Swiper
         slidesPerView={5}
         spaceBetween={30}
@@ -59,259 +155,125 @@ const SwiperContainer = (props) => {
           },
         }}
       >
-        {props.data
-          .filter((movie) => movie.genre === "Action")
-          .map((item, i) => (
-            <div key={`SwiperConts${item.id}`} className="swiperCont">
-              <SwiperSlide key={`fajhfafasf${item.id}`}>
-                <img src={item.img_url} alt="" />
-                <p className="bottom">{item.title}</p>
+        {props.data.filter(movie => movie.genre === "Science Fiction")
+              .map((item, i) => 
+              <div key={`SwiperdsaCont${item.id}`} className="swiperCont">
+                <SwiperSlide>
+                  <img src={item.img_url} alt="" />
+                  <p className="bottom">{item.title}</p>
 
-                <div className="play-icon" onClick={() => openInfo(item)}>
-                  <div className="icon-container">
-                    <img src={PlayIcon} alt="play" />
+                  <div className="play-icon" onClick={() => openInfo(item)}>
+                    <div className="icon-container">
+                      <img src={PlayIcon} alt="play" />
+                    </div>
                   </div>
-<<<<<<< HEAD
-                </div>
-              </SwiperSlide>
-            </div>
-          ))}
-      </Swiper>
-
-      {props.data
-        .filter((movie) => movie.id === 8)
-        .map((item, idx) => (
-          <h1 key={`dsahjs${item.id}`}>{item.genre}</h1>
-        ))}
-      <Swiper
-        slidesPerView={5}
-        spaceBetween={30}
-        slidesPerGroup={3}
-        loop={false}
-        loopFillGroupWithBlank={false}
-        pagination={{
-          clickable: true,
-        }}
-        navigation={true}
-        modules={[Pagination, Navigation]}
-        className="mySwiper"
-        breakpoints={{
-          "@0.00": {
-            slidesPerView: 1,
-            spaceBetween: 10,
-          },
-          "@0.75": {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-          "@1.00": {
-            slidesPerView: 3,
-            spaceBetween: 40,
-          },
-          "@1.50": {
-            slidesPerView: 4,
-            spaceBetween: 50,
-          },
-        }}
-      >
-        {props.data
-          .filter((movie) => movie.genre === "Fantasy")
-          .map((item, i) => (
-            <div key={`wqerwqweqr${item.id}`} className="swiperCont">
-              <SwiperSlide>
-                <img src={item.img_url} alt="" />
-                <p className="bottom">{item.title}</p>
-
-                <div className="play-icon" onClick={() => openInfo(item)}>
-                  <div className="icon-container">
-                    <img src={PlayIcon} alt="play" />
-                  </div>
-                </div>
-              </SwiperSlide>
-            </div>
-          ))}
-      </Swiper>
-      {props.data
-        .filter((movie) => movie.id === 1)
-        .map((item, idx) => (
-          <h1 key={`dsdadsaasww${item.id}`}>{item.genre}</h1>
-        ))}
-      <Swiper
-        slidesPerView={5}
-        spaceBetween={30}
-        slidesPerGroup={3}
-        loop={false}
-        loopFillGroupWithBlank={false}
-        pagination={{
-          clickable: true,
-        }}
-        navigation={true}
-        modules={[Pagination, Navigation]}
-        className="mySwiper"
-        breakpoints={{
-          "@0.00": {
-            slidesPerView: 1,
-            spaceBetween: 10,
-          },
-          "@0.75": {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-          "@1.00": {
-            slidesPerView: 3,
-            spaceBetween: 40,
-          },
-          "@1.50": {
-            slidesPerView: 4,
-            spaceBetween: 50,
-          },
-        }}
-      >
-        {props.data
-          .filter((movie) => movie.genre === "Science Fiction")
-          .map((item, i) => (
-            <div key={`SwiperdsaCont${item.id}`} className="swiperCont">
-              <SwiperSlide>
-                <img src={item.img_url} alt="" />
-                <p className="bottom">{item.title}</p>
-
-                <div className="play-icon" onClick={() => openInfo(item)}>
-                  <div className="icon-container">
-                    <img src={PlayIcon} alt="play" />
-                  </div>
-                </div>
-              </SwiperSlide>
-            </div>
-          ))}
-        {props.data.map((item, i) => {
-          return (
-            <div className="swiperCont" key={`swiperCon${i}`}>
-              <SwiperSlide key={`SwiperSlide${i}`}>
-                <img src={item.img_url} alt="" />
-                <p className="bottom">{item.title}</p>
-
-                <div className="play-icon" onClick={() => openInfo(item)}>
-                  <div className="icon-container">
-                    <img src={PlayIcon} alt="play" />
-                  </div>
-                </div>
-              </SwiperSlide>
-            </div>
-          );
-        })}
-=======
                 </SwiperSlide>
               </div>
               )}
->>>>>>> d9160712fffb329f54751e2c408673feb3b1c5df
       </Swiper>
-      {props.data
-        .filter((movie) => movie.id === 12)
-        .map((item, idx) => (
-          <h1 key={`sadsadsafwqooop${item.id}`}>{item.genre}</h1>
-        ))}
-      <Swiper
-        slidesPerView={5}
-        spaceBetween={30}
-        slidesPerGroup={3}
-        loop={false}
-        loopFillGroupWithBlank={false}
-        pagination={{
-          clickable: true,
-        }}
-        navigation={true}
-        modules={[Pagination, Navigation]}
-        className="mySwiper"
-        breakpoints={{
-          "@0.00": {
-            slidesPerView: 1,
-            spaceBetween: 10,
-          },
-          "@0.75": {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-          "@1.00": {
-            slidesPerView: 3,
-            spaceBetween: 40,
-          },
-          "@1.50": {
-            slidesPerView: 4,
-            spaceBetween: 50,
-          },
-        }}
-      >
-        {props.data
-          .filter((movie) => movie.genre === "Mystery")
-          .map((item, i) => (
-            <div key={`SwiperCdassont${item.id}`} className="swiperCont">
-              <SwiperSlide>
-                <img src={item.img_url} alt="" />
-                <p className="bottom">{item.title}</p>
+              {props.data.filter(movie => movie.id === 12)
+              .map((item, idx) => <h1 key={`sadsadsafwqooop${item.id}`}>{item.genre}</h1>)
+              }
+              <Swiper
+                slidesPerView={5}
+                spaceBetween={30}
+                slidesPerGroup={3}
+                loop={false}
+                loopFillGroupWithBlank={false}
+                pagination={{
+                  clickable: true,
+                }}
+                navigation={true}
+                modules={[Pagination, Navigation]}
+                className="mySwiper"
+                breakpoints={{
+                  "@0.00": {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                  },
+                  "@0.75": {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                  },
+                  "@1.00": {
+                    slidesPerView: 3,
+                    spaceBetween: 40,
+                  },
+                  "@1.50": {
+                    slidesPerView: 4,
+                    spaceBetween: 50,
+                  },
+                }}
+              >
+          {props.data.filter(movie => movie.genre === "Mystery")
+              .map((item, i) => 
+              <div key={`SwiperCdassont${item.id}`} className="swiperCont">
+                <SwiperSlide>
+                  <img src={item.img_url} alt="" />
+                  <p className="bottom">{item.title}</p>
 
-                <div className="play-icon" onClick={() => openInfo(item)}>
-                  <div className="icon-container">
-                    <img src={PlayIcon} alt="play" />
+                  <div className="play-icon" onClick={() => openInfo(item)}>
+                    <div className="icon-container">
+                      <img src={PlayIcon} alt="play" />
+                    </div>
                   </div>
-                </div>
-              </SwiperSlide>
-            </div>
-          ))}
-      </Swiper>
-      {props.data
-        .filter((movie) => movie.id === 13)
-        .map((item, idx) => (
-          <h1 key={`gewwqawaasfr${item.id}`}>{item.genre}</h1>
-        ))}
-      <Swiper
-        slidesPerView={5}
-        spaceBetween={30}
-        slidesPerGroup={3}
-        loop={false}
-        loopFillGroupWithBlank={false}
-        pagination={{
-          clickable: true,
-        }}
-        navigation={true}
-        modules={[Pagination, Navigation]}
-        className="mySwiper"
-        breakpoints={{
-          "@0.00": {
-            slidesPerView: 1,
-            spaceBetween: 10,
-          },
-          "@0.75": {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-          "@1.00": {
-            slidesPerView: 3,
-            spaceBetween: 40,
-          },
-          "@1.50": {
-            slidesPerView: 4,
-            spaceBetween: 50,
-          },
-        }}
-      >
-        {props.data
-          .filter((movie) => movie.genre === "Adventure")
-          .map((item) => (
-            <div key={`dsafwa${item.id}`} className="swiperCont">
-              <SwiperSlide>
-                <img src={item.img_url} alt="" />
-                <p className="bottom">{item.title}</p>
+                </SwiperSlide>
+              </div>
+              )}
+              </Swiper>
+              {props.data.filter(movie => movie.id === 13)
+              .map((item, idx) => <h1 key={`gewwqawaasfr${item.id}`}>{item.genre}</h1>)
+              }
+              <Swiper
+                slidesPerView={5}
+                spaceBetween={30}
+                slidesPerGroup={3}
+                loop={false}
+                loopFillGroupWithBlank={false}
+                pagination={{
+                  clickable: true,
+                }}
+                navigation={true}
+                modules={[Pagination, Navigation]}
+                className="mySwiper"
+                breakpoints={{
+                  "@0.00": {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                  },
+                  "@0.75": {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                  },
+                  "@1.00": {
+                    slidesPerView: 3,
+                    spaceBetween: 40,
+                  },
+                  "@1.50": {
+                    slidesPerView: 4,
+                    spaceBetween: 50,
+                  },
+                }}
+              >
+                {props.data.filter(movie => movie.genre === "Adventure")
+                    .map((item) => 
+                    <div key={`dsafwa${item.id}`} className="swiperCont">
+                      <SwiperSlide>
+                        <img src={item.img_url} alt="" />
+                        <p className="bottom">{item.title}</p>
 
-                <div className="play-icon" onClick={() => openInfo(item)}>
-                  <div className="icon-container">
-                    <img src={PlayIcon} alt="play" />
-                  </div>
-                </div>
-              </SwiperSlide>
-            </div>
-          ))}
-      </Swiper>
-    </div>
+                        <div className="play-icon" onClick={() => openInfo(item)}>
+                          <div className="icon-container">
+                            <img src={PlayIcon} alt="play" />
+                          </div>
+                        </div>
+                      </SwiperSlide>
+                    </div>
+                    )}
+              </Swiper>
+      </div>
+
+      
   );
 };
 
