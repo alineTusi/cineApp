@@ -1,8 +1,7 @@
 import React, { useState} from 'react';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
-import Button from '@material-ui/core/Button';
-import TextField from '@material-ui/core/TextField';
+import { Button, TextField } from '@mui/material';
 import { MainRegisterContainer, Logo, RegisterTitle,InputFormContainer } from "./Register.style"
 import "./Register.css";
 import PopcornIcon from "../../assets/icons/popcorn.svg"
