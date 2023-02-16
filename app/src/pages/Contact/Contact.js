@@ -35,10 +35,12 @@ import {
   PhoneNumbersTittle,
   Map,
 } from "./Contact.style";
+import ResponsiveAppBar from "../../components/NavBar/NavBar";
 
 export default function Contact() {
   return (
     <ContactPage>
+       <ResponsiveAppBar />
       <Stars
         style={{
           backgroundImage: `url(${StarsBackground})`,

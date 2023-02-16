@@ -19,10 +19,12 @@ import {
   Slash2,
   AboutRight,
 } from "./About.style";
+import ResponsiveAppBar from "../../components/NavBar/NavBar";
 
 export default function About() {
   return (
     <AboutBackground>
+       <ResponsiveAppBar />
       <StarsBackround
         style={{
           backgroundImage: `url(${BackgroundPic})`,

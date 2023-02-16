@@ -6,14 +6,17 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import PlayIcon from "../../assets/icons/play.svg";
+import { useNavigate} from 'react-router-dom'
 
 const SwiperContainer = (props) => {
+ const navigate = useNavigate()
   
-
   const openInfo = (item) => {
-    const url = `http://localhost:3000/movieInfo/${item.id}`;
-    window.open(url);
-  };
+    navigate(`/movieInfo/${item.id}`);
+  }
+  
+    
+  
 
   return (
     <div id="swiper_slide_main">
@@ -167,22 +170,6 @@ const SwiperContainer = (props) => {
                 </SwiperSlide>
               </div>
               )}
-        {props.data.map((item, i) => {
-          return (
-            <div className="swiperCont" key={`swiperCon${i}`}>
-              <SwiperSlide key={`SwiperSlide${i}`}>
-                <img src={item.img_url} alt="" />
-                <p className="bottom">{item.title}</p>
-
-                <div className="play-icon" onClick={() => openInfo(item)}>
-                  <div className="icon-container">
-                    <img src={PlayIcon} alt="play" />
-                  </div>
-                </div>
-              </SwiperSlide>
-            </div>
-          );
-        })}
       </Swiper>
               {props.data.filter(movie => movie.id === 12)
               .map((item, idx) => <h1 key={`sadsadsafwqooop${item.id}`}>{item.genre}</h1>)

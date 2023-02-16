@@ -28,7 +28,6 @@ const LoginForm = () => {
   const [passwordExist, setPasswordExist] = useState(false);
   const [error, setError] = useState(null);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [user, setUser] = useState("");
 
   const navigate = useNavigate();
 
@@ -50,7 +49,7 @@ const LoginForm = () => {
     onSubmit: async (values, actions) => {
       const vals = { ...values };
       try {
-        const response = await fetch("http://localhost:3004/login", {
+        const response = await fetch("https://app-15d2875f-7563-4baf-864b-3beec4034cb4.cleverapps.io/login", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -64,8 +63,7 @@ const LoginForm = () => {
           setPasswordExist(true);
         } else {
             setIsLoggedIn(true);
-            setUser(vals.email);
-           
+          
         }
       } catch (error) {
         setError(error.message);

@@ -6,14 +6,12 @@ import LoginForm from "./pages/LogIn/LogIn";
 import Register from "./pages/Register/Register.js";
 import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
-import ResponsiveAppBar from "./components/NavBar/NavBar";
 import LearnMore from "./components/AboutInfo/LearnMore";
 import PaymentForm from "./pages/Payment/Payment";
 
 function App() {
   return (
     <>
-      <ResponsiveAppBar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />

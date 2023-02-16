@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import starIcon from "../../assets/icons/starMovieInfo.svg";
 import clockIcon from "../../assets/icons/clock.svg";
 import Schedule from "../Schedule/Schedule";
+import ResponsiveAppBar from "../NavBar/NavBar";
 
 const MovieInfo = () => {
   const [movie, setMovie] = useState({});
@@ -25,16 +26,13 @@ const MovieInfo = () => {
 
   return (
     <div key={movie.id} className="movie-info-container">
+       <ResponsiveAppBar />
       <div className="movie-info-content">
         <div className="movie-info">
           <div className="movie-info-img-wrapper">
 
 
             <img className="movie-info-img" src={movie.img_url} alt="movie img"/>
-
-
-
-         
 
           </div>
           <div className="movie-info-description-wrapper">

@@ -29,7 +29,7 @@ const UserLogin = ({myemail}) => {
 
  const handleLogout = async () => {
     try {
-      const response = await axios.post('http://localhost:3004/logout');
+      const response = await axios.post('https://app-15d2875f-7563-4baf-864b-3beec4034cb4.cleverapps.io/logout');
       if (response.status === 204) {
       setIsLoggedIn(false);
       }
