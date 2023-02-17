@@ -11,4 +11,8 @@ export const ScheduleInfoWrapper = styled.div`
     cursor: pointer;
     background-color: #021335; 
   }
+  & p {
+    line-height: 4px;
+  }
 `;
+

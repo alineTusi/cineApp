@@ -59,7 +59,7 @@ const ChairMapHeader = () => {
           <h3>
             {formatDate(schedule.date)} | {schedule.time}
           </h3>
-          {/* <h3>Room {schedule.room_id}</h3> */}
+          <h3>Room {schedule.room_id}</h3>
         </ChairMapHeaderInfo>
       </ChairMapHeaderContainer>
     </>

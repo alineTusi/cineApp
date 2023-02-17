@@ -10,8 +10,8 @@
   }
 }
 
-.css-quj9j6-MuiTable-root {
-  background-color: rgba(0, 0, 0, 0.87) !important;
+.MuiTable-root {
+  background-color: #000f2e!important;
   opacity: 0.9;
 }
 
