@@ -2,6 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import ChairMap from "../ChairMap/ChairMap";
 import ChairMapHeader from "../ChairMapHeader/ChairMapHeader";
+import ResponsiveAppBar from "../NavBar/NavBar";
 import { RoomContainer } from "./Room.style";
 
 const Room = () => {
@@ -10,6 +11,7 @@ const Room = () => {
   return (
     <>
       <RoomContainer>
+      <ResponsiveAppBar />
         <ChairMapHeader scheduleId={scheduleId} />
         <ChairMap scheduleId={scheduleId} />
       </RoomContainer>

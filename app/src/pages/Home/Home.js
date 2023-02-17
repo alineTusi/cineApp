@@ -5,6 +5,7 @@ import SearchBar from "../../components/Search/Search";
 import SwiperContainer from "../../components/SwiperSlide/SwiperSlide";
 import axios from "axios";
 import ResponsiveAppBar from "../../components/NavBar/NavBar";
+import { HomeContainer } from "./Home.style";
 
 const Home = () => {
   const [results, SetResults] = React.useState(null);
@@ -34,13 +35,13 @@ const Home = () => {
   };
 
   return (
-    <>
+    <HomeContainer>
      <ResponsiveAppBar />
       <Carousel />
       <SearchBar searchChange={searchChange} />
       <SwiperContainer data={results !== null ? results : items} />
       <Footer />
-    </>
+    </HomeContainer>
   );
 };
 
