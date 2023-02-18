@@ -40,6 +40,13 @@
   width: 100%;
   background-size: cover;
 }
+@media screen and (min-width: 1980px) {
+  .swiper-slide img {
+    display: block;
+    height: 720px;
+    width: 100%;
+  }
+}
 
 
  .play-icon {
